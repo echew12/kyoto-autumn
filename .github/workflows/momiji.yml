@@ -1,0 +1,57 @@
+name: Momiji check and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Keihan updates on Tuesdays and Fridays (Japan time). Check three times
+    # on those days, plus once on the other days in case they publish late.
+    # 01:17, 05:17, 09:17 UTC = 10:17, 14:17, 18:17 in Japan.
+    - cron: "17 1,5,9 * * 2,5"
+    - cron: "17 3 * * 0,1,3,4,6"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read Keihan's foliage report
+        if: github.event_name != 'push'
+        run: python3 scripts/update_foliage.py
+
+      - name: Save foliage.json if it changed
+        if: github.event_name != 'push'
+        run: |
+          if ! git diff --quiet -- foliage.json; then
+            git config user.name "momiji-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add foliage.json
+            git commit -m "Momiji update: $(python3 -c 'import json;d=json.load(open("foliage.json"));print(d["asOf"], d["spots"])')"
+            git push
+          fi
+
+      - name: Prepare site files
+        run: |
+          mkdir -p _site
+          cp index.html three.min.js foliage.json _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>京都で、紅葉デート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kaisei+Decol:wght@500;700&family=Zen+Maru+Gothic:wght@400;700&display=swap">
+<meta name="description" content="京都で過ごす3日間のしおり · Our three autumn days in Kyoto, 13–15 Nov 2026">
+<meta property="og:title" content="京都で、紅葉デート">
+<meta property="og:description" content="Three autumn days in Kyoto · 13–15 Nov 2026">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#211c33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23211c33'/%3E%3Cpath d='M32 8l4 12 9-8-2 13 12-3-8 10 11 4-12 4 6 9-11-3-2 11-7-8-7 8-2-11-11 3 6-9-12-4 11-4-8-10 12 3-2-13 9 8z' fill='%23e0563a'/%3E%3Cpath d='M32 30v26' stroke='%239c2416' stroke-width='3'/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: a dusk-to-night Kyoto street. A felt stop-motion diorama opens the page; one day shows at a time under pixel-art banners; a hand-drawn map closes it. */
+:root{
+  --night:#211c33; --night-2:#2d2645; --line:#463c63;
+  --paper:#fbf4ea; --paper-edge:#eadcc6; --ink:#2b2230; --ink-soft:#6e6070;
+  --vermilion:#d0402a; --amber:#ffc65a; --pink:#ee8fa6; --peach:#f6b58c;
+  --text:#f4ebe0; --text-soft:#c3b7d0;
+  --d1:#e0563a; --d2:#eea131; --d3:#47aaa7;
+  --f-head:"Kaisei Decol","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  --f-px:"DotGothic16","Hiragino Kaku Gothic ProN",monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--night);color:var(--text);font-family:var(--f-body);font-size:15px;line-height:1.65;overflow-x:hidden;
+  background-image:linear-gradient(180deg,#3a2a52 0,#2a2140 420px,var(--night) 900px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--night)}
+#leaves{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.wrap{position:relative;z-index:1;max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 56px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+img.px,canvas.px{image-rendering:pixelated;image-rendering:crisp-edges}
+.px-ico{display:block;width:28px;height:28px;image-rendering:pixelated}
+
+/* ---------- hero diorama ---------- */
+.hero{position:relative;height:min(108vw,470px);border-radius:16px;overflow:hidden;
+  background:linear-gradient(#6e4385,#e6708f 55%,#5a3a2a 56%,#3b2618);
+  box-shadow:0 0 0 6px #3b2618,0 0 0 8px #6e4426,0 22px 44px rgba(0,0,0,.5)}
+.hero canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+.hero .fallback{position:absolute;inset:0;width:100%;height:100%}
+.woof{position:absolute;left:0;top:0;z-index:2;pointer-events:none;white-space:nowrap;background:#fff;color:#2b2230;font-family:var(--f-head);font-weight:700;font-size:18px;line-height:1.15;
+  padding:5px 12px 6px;border-radius:14px;box-shadow:0 3px 0 rgba(0,0,0,.25);opacity:0;transform:translate(-30%,-110%) scale(.4);transform-origin:20% 100%;transition:opacity .12s,transform .2s cubic-bezier(.3,1.8,.5,1)}
+.woof small{display:block;font-family:var(--f-body);font-weight:400;font-size:11px;color:#6e6070;text-align:center}
+.woof::after{content:"";position:absolute;left:22%;bottom:-7px;border:7px solid transparent;border-top-color:#fff;border-bottom:0}
+.woof.on{opacity:1;transform:translate(-30%,-110%) scale(1)}
+.hero .hint{position:absolute;left:12px;bottom:10px;font-family:var(--f-px);font-size:11px;color:#fff;background:rgba(33,28,51,.55);padding:3px 8px;border-radius:99px;pointer-events:none}
+
+/* ---------- intro ---------- */
+.intro{margin-top:26px;display:grid;gap:12px}
+.intro.top{margin-top:4px;margin-bottom:20px}
+.eyebrow{font-family:var(--f-px);font-size:13px;letter-spacing:.12em;color:var(--amber)}
+h1{font-family:var(--f-head);font-weight:700;font-size:clamp(30px,8.6vw,42px);line-height:1.2;margin:0;text-wrap:balance}
+h1 .en{display:block;font-family:var(--f-body);font-weight:400;font-size:.45em;color:var(--text-soft);letter-spacing:.04em;margin-top:6px}
+.note{background:var(--paper);color:var(--ink);padding:16px 18px;border-radius:12px;box-shadow:0 6px 0 #c76a54}
+.note p{margin:0}
+.note .ja{font-weight:700;font-size:16px}
+.note .en{color:var(--ink-soft);font-size:14px;margin-top:4px}
+.count{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.count b{font-family:var(--f-head);font-size:32px;color:var(--amber);font-variant-numeric:tabular-nums}
+.count span{color:var(--text-soft);font-size:14px}
+
+/* ---------- tabs ---------- */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  margin:28px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0;padding:10px max(16px,env(safe-area-inset-left,0px));
+  background:linear-gradient(var(--night) 78%,rgba(33,28,51,0))}
+.tabs button{all:unset;cursor:pointer;text-align:center;padding:7px 4px 8px;border-radius:12px;background:var(--night-2);border:2px solid var(--line);line-height:1.25;min-height:44px;transition:transform .15s,border-color .2s,background .2s}
+.tabs button b{display:block;font-family:var(--f-head);font-size:17px}
+.tabs button span{font-size:11px;color:var(--text-soft)}
+.tabs button[aria-selected="true"]{border-color:var(--dc);background:color-mix(in srgb,var(--dc) 22%,var(--night-2));transform:translateY(-2px)}
+.tabs button .today{display:block;font-family:var(--f-px);font-size:10px;color:var(--amber)}
+
+/* ---------- day panel ---------- */
+.panel{margin-top:14px;animation:pageIn .45s ease both}
+@keyframes pageIn{from{opacity:.25;transform:translateY(10px)}to{opacity:1;transform:none}}
+.banner{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px #1a1528}
+.strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.scene{flex:0 0 100%;scroll-snap-align:start;margin:0;position:relative}
+.scene canvas{display:block;width:100%;height:auto;aspect-ratio:2/1}
+.scene figcaption{position:absolute;left:10px;bottom:10px;background:rgba(33,28,51,.75);color:#fff;font-size:12.5px;padding:3px 11px;border-radius:99px;line-height:1.4;max-width:calc(100% - 90px)}
+.scene figcaption small{margin-left:6px;color:#dcd2e8;font-size:11px}
+.dots{position:absolute;right:10px;bottom:14px;display:flex;gap:6px}
+.dots button{all:unset;cursor:pointer;width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.5);transition:width .2s}
+.dots button[aria-current="true"]{background:#fff;width:18px}
+.menu ul{margin:2px 0 6px;padding:0;list-style:none}
+.menu li{padding:5px 0;border-bottom:1px solid #f0e6d6;font-size:14px;font-weight:700}
+.menu li:last-child{border-bottom:0}
+.menu li span{display:block;font-weight:400;font-size:12.5px;color:var(--ink-soft)}
+.mnote{margin:6px 0 2px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.wx{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:8px;background:rgba(251,244,234,.94);color:var(--ink);border-radius:12px;padding:6px 10px 6px 8px;font-size:12px;line-height:1.25;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.wx svg{width:30px;height:30px;flex:none}
+.wx b{font-size:15px;font-variant-numeric:tabular-nums}
+.wx small{display:block;color:var(--ink-soft);font-size:10.5px}
+.dayhead{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:14px;padding-bottom:10px;border-bottom:3px solid var(--dc)}
+.dayhead h2{font-family:var(--f-head);font-weight:700;font-size:24px;line-height:1.25;margin:0}
+.dayhead h2 span{display:block;font-family:var(--f-body);font-weight:400;font-size:14px;color:var(--text-soft);margin-top:2px}
+.pill{font-size:12px;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--night-2);white-space:nowrap}
+.pill i{width:10px;height:10px;border-radius:50%;background:var(--c);display:block}
+.wxlink{display:block;margin-top:8px;font-size:12px;color:var(--text-soft)}
+
+.timeline{position:relative;padding-left:70px;margin-top:18px;display:grid;gap:14px}
+.timeline::before{content:"";position:absolute;left:31px;top:22px;bottom:22px;width:4px;border-radius:2px;
+  background:repeating-linear-gradient(var(--paper-edge) 0 8px,transparent 8px 16px);opacity:.5}
+.walker{position:absolute;left:0;top:0;width:66px;height:72px;transition:transform .8s cubic-bezier(.5,1.6,.5,1);z-index:2;pointer-events:none}
+.walker img.duo{position:absolute;bottom:-6px;left:-6px;width:80px;height:80px;animation:hop .66s steps(2) infinite}
+.walker .prop{position:absolute;top:-26px;left:36px;width:30px;height:30px;padding:3px;border-radius:8px;background:var(--paper);box-shadow:0 2px 0 rgba(0,0,0,.3);opacity:0;transform:scale(.6);transition:opacity .25s,transform .25s}
+.walker.has-prop .prop{opacity:1;transform:none}
+.walker .prop img{width:24px;height:24px;image-rendering:pixelated;display:block}
+@keyframes hop{50%{transform:translateY(-3px) rotate(-2deg)}}
+
+.stop{background:var(--paper);color:var(--ink);padding:13px 14px;border-radius:14px;position:relative;min-width:0;box-shadow:0 4px 0 #15111f;transition:box-shadow .3s,transform .3s}
+.stop::before{content:"";position:absolute;left:-46px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--night);border:3px solid var(--paper-edge)}
+.stop.here{box-shadow:0 4px 0 var(--dc);transform:translateX(2px)}
+.stop.here::before{background:var(--dc);border-color:var(--amber)}
+.stop .row{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.stop .row>div{min-width:0}
+.stop .ico{margin-top:3px}
+.stop .t{font-family:var(--f-px);font-size:12px;color:var(--vermilion);letter-spacing:.06em}
+.stop .ja{font-weight:700;font-size:16px;line-height:1.45}
+.stop .en{color:var(--ink-soft);font-size:14px;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.links a{display:inline-flex;align-items:center;gap:5px;min-height:36px;padding:6px 12px;text-decoration:none;font-size:13px;font-weight:700;border-radius:99px;color:var(--ink);background:#fff;border:2px solid var(--ink);transition:transform .1s}
+.links a:active{transform:scale(.96)}
+.links a::after{content:"↗";font-weight:400}
+
+details.recs{margin-top:10px;border-top:1px dashed var(--paper-edge);padding-top:8px}
+details.recs summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--ink);min-height:36px}
+details.recs summary::-webkit-details-marker{display:none}
+details.recs summary::before{content:"";width:0;height:0;border-left:6px solid var(--dc);border-top:5px solid transparent;border-bottom:5px solid transparent;transition:transform .2s}
+details.recs[open] summary::before{transform:rotate(90deg)}
+details.recs summary small{font-weight:400;color:var(--ink-soft)}
+.grp{margin-top:6px}
+.grp h4{margin:8px 0 4px;font-family:var(--f-px);font-weight:400;font-size:12px;color:var(--ink-soft);letter-spacing:.06em}
+.rec{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;padding:7px 0;border-bottom:1px solid #f0e6d6}
+.rec:last-child{border-bottom:0}
+.rec .n{font-weight:700;font-size:14px;min-width:0}
+.rec .n span{font-weight:400;color:var(--ink-soft);font-size:12.5px;margin-left:4px}
+.rec .d{grid-column:1;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.rec a{grid-column:2;grid-row:1/span 2;font-size:12px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);border-radius:99px;padding:5px 10px;white-space:nowrap}
+.info{margin-top:8px;font-size:12.5px;color:var(--ink);background:#fff3df;border-radius:10px;padding:8px 10px;line-height:1.55}
+.info b{color:var(--vermilion)}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.opt{border:2px dashed var(--paper-edge);border-radius:12px;padding:9px 10px;min-width:0;display:flex;flex-direction:column;gap:2px}
+.opt.pick{border:2px solid var(--dc);background:#fff8ee}
+.badge{font-family:var(--f-px);font-size:11px;color:#fff;background:var(--vermilion);align-self:flex-start;padding:1px 7px;border-radius:99px;margin-bottom:4px}
+.opt .ja{font-size:14.5px}
+.opt .en{font-size:12.5px}
+.opt .links{margin-top:6px}
+.opt .links a{font-size:12px;padding:5px 10px;min-height:34px}
+.why{font-size:12.5px;color:var(--ink-soft);margin-top:8px}
+
+/* ---------- meter ---------- */
+section.box{margin-top:28px;border:2px solid var(--line);background:rgba(45,38,69,.82);padding:16px;border-radius:16px}
+section.box h2{font-family:var(--f-head);font-weight:700;font-size:20px;margin:0}
+section.box .sub{font-size:12.5px;color:var(--text-soft);margin:2px 0 12px}
+.spot{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center;padding:9px 0;border-top:1px dashed var(--line)}
+.spot:first-of-type{border-top:0}
+.spot .day{font-family:var(--f-px);font-size:12px;grid-row:span 2;color:var(--dc)}
+.spot .nm{font-size:14px;min-width:0}
+.spot .nm small{color:var(--text-soft);margin-left:6px}
+.bar{display:flex;gap:3px;align-items:center;flex-wrap:wrap}
+.bar i{width:22px;height:10px;border-radius:3px;background:#433a5c;display:block}
+.bar i.on{background:var(--c)}
+.bar em{font-style:normal;font-size:12px;color:var(--text-soft);margin-left:6px}
+.src{font-size:12px;color:var(--text-soft);margin:10px 0 0}
+
+/* ---------- leaf colour switch ---------- */
+.leafbtn{position:fixed;z-index:6;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  width:54px;height:54px;border-radius:50%;border:3px solid var(--paper);background:var(--night-2);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+.leafbtn svg{width:30px;height:30px}
+.leafpop{position:fixed;z-index:6;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(80px + env(safe-area-inset-bottom,0px));width:min(300px,calc(100vw - 28px));
+  background:var(--paper);color:var(--ink);border-radius:16px;padding:12px 12px 10px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.leafpop p{margin:0 0 8px;font-size:12.5px;line-height:1.45}
+.leafpop p b{font-size:14px}
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.swatches button{all:unset;cursor:pointer;display:flex;align-items:center;gap:6px;padding:7px 8px;border-radius:10px;border:2px solid var(--paper-edge);font-size:12px;line-height:1.2;min-height:36px}
+.swatches button i{width:14px;height:14px;border-radius:50%;flex:none;background:var(--c)}
+.swatches button[aria-pressed="true"]{border-color:var(--ink);background:#fff}
+
+/* ---------- map ---------- */
+.mapwrap{position:relative;border-radius:14px;overflow:hidden;background:#efe3cf}
+.mapwrap svg{display:block;width:100%;height:auto}
+.mapwrap .mk{cursor:pointer}
+.mapwrap .mk circle.dot{stroke:#2b2230;stroke-width:2}
+.mapwrap .mk.dim{opacity:.22}
+.mapwrap .mk.sel circle.dot{stroke:#fff;stroke-width:3}
+.mapfilter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.mapfilter button{all:unset;cursor:pointer;font-size:12.5px;padding:6px 12px;border-radius:99px;border:2px solid var(--line);min-height:20px}
+.mapfilter button[aria-pressed="true"]{border-color:var(--dc,var(--text));background:color-mix(in srgb,var(--dc,#fff) 22%,transparent)}
+.mapcard{margin-top:10px;background:var(--paper);color:var(--ink);border-radius:12px;padding:11px 13px;min-height:62px}
+.mapcard .k{font-family:var(--f-px);font-size:11px}
+.mapcard .ja{font-weight:700}
+.mapcard .en{color:var(--ink-soft);font-size:13px}
+.mapnote{font-size:11.5px;color:var(--text-soft);margin-top:8px}
+
+footer{margin-top:44px;text-align:center;font-size:12.5px;color:var(--text-soft)}
+footer img{width:96px;height:96px;display:block;margin:0 auto 6px}
+
+@media (max-width:370px){ .fork{grid-template-columns:1fr} .timeline{padding-left:62px} }
+@media (prefers-reduced-motion:reduce){
+  .walker,.walker img.duo,.panel{transition:none;animation:none}
+  #leaves{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="leaves" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <header class="intro top">
+    <div class="eyebrow">2026.11.13 — 11.15 · 2泊3日</div>
+    <h1>京都で、紅葉デート<span class="en">Three autumn days in Kyoto</span></h1>
+  </header>
+
+  <section class="hero" id="hero" aria-label="A 3D diorama: a fluffy white toy poodle and a hamster on a red cushion in a little Kyoto shop with a round shoji window, paper lanterns and a maple tree">
+    <div class="woof" id="woof" aria-hidden="true">ワンワン！<small>Woof woof!</small></div>
+    <span class="hint">ドラッグで見回せるよ · Drag to look around</span>
+  </section>
+
+  <section class="intro">
+    <div class="note">
+      <p class="ja">京都での3日間、一緒に来てくれてありがとう！ふたりで最高の時間を過ごそうね！</p>
+      <p class="en">Thank you for joining me for these three days in Kyoto! Let's have a great time together!</p>
+    </div>
+    <div class="count" id="count"></div>
+  </section>
+
+  <section class="box" aria-labelledby="meterTitle">
+    <h2 id="meterTitle">紅葉メーター · Momiji meter</h2>
+    <p class="sub">落ち葉の色は、その日に行く場所の紅葉に合わせて変わるよ。右下の葉っぱボタンで色を試せる。<br>Falling leaves follow the foliage where we'll be that day. Try other colours with the leaf button.</p>
+    <div id="spots"></div>
+    <p class="src" id="src"></p>
+  </section>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Days"></nav>
+  <main id="panel"></main>
+
+
+  <section class="box" aria-labelledby="mapTitle">
+    <h2 id="mapTitle">ふたりの地図 · Our map</h2>
+    <p class="sub">点をタップすると詳細が見られるよ · Tap a dot for details</p>
+    <div class="mapfilter" id="mapfilter"></div>
+    <div class="mapwrap" id="map"></div>
+    <div class="mapcard" id="mapcard"></div>
+    <p class="mapnote">位置はだいたいの目安。新大阪は地図の外（京都駅から新幹線で約15分）。<br>Positions are approximate. Shin-Osaka is off the map, about 15 minutes from Kyoto Station by shinkansen.</p>
+  </section>
+
+  <footer><img id="footDuo" alt="" hidden>たのしみだね · Can't wait</footer>
+</div>
+
+<button class="leafbtn" id="leafbtn" aria-label="Leaf colours" aria-expanded="false" aria-controls="leafpop">
+  <svg viewBox="-1.1 -1.15 2.2 2.2" id="leafbtnIcon" aria-hidden="true"></svg>
+</button>
+<div class="leafpop" id="leafpop" hidden>
+  <p><b>葉っぱの色 · Leaf colour</b><br>見頃じゃなくても、気分だけ紅葉に。 · Preview any stage, even if the leaves aren't there yet.</p>
+  <div class="swatches" id="swatches"></div>
+</div>
+
+<script src="three.min.js"></script>
+<script>
+(function(){
+"use strict";
+/* ============================================================
+   DATA — foliage (Keihan, updated Tue & Fri) and weather
+   ============================================================ */
+const FOLIAGE = {
+  asOf:"2026-11-06", source:"https://www.keihan.co.jp/momiji/index_en.html",
+  spots:{
+    kodaiji:  {ja:"高台寺（東山）", en:"Kodaiji, Higashiyama", s:1},
+    shinnyodo:{ja:"真如堂",        en:"Shinnyodo",           s:1},
+    nanzenji: {ja:"南禅寺（岡崎）", en:"Nanzenji, Okazaki",   s:1}
+  }
+};
+const STATUS = [
+  {ja:"青葉",       en:"Green",    c:["#6b8f3a","#7ea34a","#57792f","#8aa84e"]},
+  {ja:"色づき始め", en:"Turning",  c:["#e0a92a","#e8862c","#c9b23a","#97a43d"]},
+  {ja:"見頃",       en:"Peak",     c:["#cf3322","#e2502a","#b0231a","#ea7a2c"]},
+  {ja:"見頃過ぎ",   en:"Past peak",c:["#a8452a","#c27a2a","#8a4a2a","#b8562e"]},
+  {ja:"落葉",       en:"Fallen",   c:["#7a5434","#94683e","#6b4a33","#86603a"]}
+];
+/* tenki.jp forecast for Higashiyama-ku, issued 6 Nov 10:00 JST. Refresh closer to the trip. */
+const WEATHER = {
+  updated:"2026-11-06",
+  link:"https://tenki.jp/forecast/6/29/6110/26105/10days.html",
+  days:{
+    "2026-11-13":{type:"forecast",hi:19,lo:9,rain:10,icon:"sun",ja:"晴れ",en:"Sunny"},
+    "2026-11-14":{type:"forecast",hi:19,lo:9,rain:20,icon:"partly",ja:"晴れのち曇り",en:"Sun, then cloud"},
+    "2026-11-15":{type:"forecast",hi:17,lo:12,rain:70,icon:"rain",ja:"曇りのち雨",en:"Cloud, then rain"}
+  }
+};
+
+/* ============================================================
+   ITINERARY
+   ============================================================ */
+const M = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const DAYS = [
+ { id:"day1", date:"2026-11-13", tab:"13 金", tabEn:"Fri", ja:"13日(金) 京都1日目", en:"Day 1 · Fri 13 Nov", spot:"kodaiji", color:"var(--d1)", banner:"gion",
+   stops:[
+    { icon:"train", t:"12:00", ja:"新大阪で待ち合わせ", en:"Meet at Shin-Osaka at 12:00", links:[{l:"地図 Map",u:M("Shin-Osaka Station")}] },
+    { icon:"hotel", ja:"カペラ京都にチェックイン", en:"Check in at Capella Kyoto",
+      links:[{l:"ホテル Hotel",u:"https://capellahotels.com/en/capella-kyoto"},{l:"地図 Map",u:M("Capella Kyoto")}],
+      info:"宮川町の旧小学校跡に建つホテル。建仁寺まで歩いてすぐ。<br>Built on a former school site in Miyagawa-cho, a short walk from Kenninji." },
+    { icon:"lunch", ja:"軽めのランチ", en:"Light lunch",
+      recs:{ja:"ランチ候補",en:"Lunch ideas",groups:[
+        {h:"軽めに · Light",items:[
+          {ja:"権兵衛",en:"Gonbei",d:"祇園の老舗うどん・そば屋。親子丼も人気 · Old Gion noodle shop, also known for oyakodon",q:"Gonbei Gion Kyoto"},
+          {ja:"鍵善良房 本店",en:"Kagizen Yoshifusa",d:"名物くずきりで甘く軽く · Famous kuzukiri noodles in black sugar syrup",q:"Kagizen Yoshifusa Shijo Kyoto"},
+          {ja:"茶寮都路里 祇園本店",en:"Saryo Tsujiri",d:"抹茶パフェの定番 · The classic Kyoto matcha parfait",q:"Saryo Tsujiri Gion Kyoto"}]}]} },
+    { icon:"torii", ja:"祇園・東山・建仁寺をお散歩", en:"Stroll Gion, Higashiyama and Kenninji",
+      links:[{l:"建仁寺 Kenninji",u:M("Kenninji Temple Kyoto")},{l:"祇園 Gion",u:M("Hanamikoji Street Kyoto")}],
+      recs:{ja:"寄り道スポット",en:"Along the way",groups:[
+        {h:"見どころ · Sights",items:[
+          {ja:"建仁寺 双龍図",en:"Kenninji twin dragons",d:"法堂の天井いっぱいの龍 · Two dragons painted across the hall ceiling",q:"Kenninji Temple Kyoto"},
+          {ja:"花見小路",en:"Hanamikoji",d:"お茶屋が並ぶ石畳 · Stone-paved street of teahouses",q:"Hanamikoji Street Kyoto"},
+          {ja:"白川・巽橋",en:"Shirakawa & Tatsumi Bridge",d:"柳と小川の小道 · Willows along a little canal",q:"Tatsumi Bridge Shirakawa Kyoto"},
+          {ja:"石塀小路",en:"Ishibe-koji",d:"静かな石畳の路地 · A quiet stone lane",q:"Ishibe-koji Lane Kyoto"},
+          {ja:"八坂の塔",en:"Yasaka Pagoda",d:"夕焼けの時間がいちばん · Best at sunset",q:"Hokanji Yasaka Pagoda Kyoto"}]}]} },
+    { icon:"pot", ja:"すきやき いろはでディナー", en:"Sukiyaki dinner at Iroha, Pontocho",
+      links:[{l:"いろは Site",u:"https://www.sukiyaki-iroha.com"},{l:"地図 Map",u:"https://maps.app.goo.gl/SEMf6vay4xMyh66c6"}],
+      info:"先斗町、四条通から北へ約80m・17:00〜21:30（L.O. 20:30）<br>On Pontocho, about 80 m north of Shijo-dori. Open 17:00–21:30, last order 20:30.",
+      menu:{ja:"お品書き",en:"Menu",sections:[{h:"コース · Courses",items:["すきやき · Sukiyaki","みずたき · Mizutaki chicken hot pot","おいるやき · Oil-grilled","しおやき · Salt-grilled","あみやき · Grilled on a mesh"]}]} },
+    { icon:"onsen", ja:"ホテルでプライベート温泉", en:"Private onsen at the hotel",
+      links:[{l:"温泉 Onsen",u:"https://capellahotels.com/en/capella-kyoto/wellness"}],
+      info:"Auriga Spaの貸切温泉ルームで、ふたりだけの時間。<br>A private onsen room at the hotel's Auriga Spa, just for us." },
+    { icon:"moon", ja:"お部屋でまったり", en:"Unwind in our room", links:[] }
+   ]},
+ { id:"day2", date:"2026-11-14", tab:"14 土", tabEn:"Sat", ja:"14日(土) 京都デート2日目", en:"Day 2 · Sat 14 Nov", spot:"shinnyodo", color:"var(--d2)", banner:"kiyomizu",
+   stops:[
+    { icon:"leaf", fork:"momiji", ja:"紅葉デート", en:"Autumn leaves date",
+      options:[
+        { key:"shinnyodo", ja:"真如堂で紅葉", en:"Shinnyodo Temple", links:[{l:"地図 Map",u:M("Shinnyodo Temple Kyoto")}] },
+        { key:"yasaka", ja:"八坂神社へ", en:"Yasaka Shrine", links:[{l:"地図 Map",u:M("Yasaka Shrine Kyoto")}] }],
+      recs:{ja:"見どころ",en:"Highlights",groups:[
+        {h:"真如堂 · Shinnyodo",items:[
+          {ja:"三重塔と紅葉",en:"Pagoda and maples",d:"塔と紅葉を一緒に撮れる定番の構図 · The classic shot: pagoda framed by maples",q:"Shinnyodo Temple Kyoto"}]},
+        {h:"八坂神社 · Yasaka",items:[
+          {ja:"舞殿の提灯",en:"Lantern hall",d:"夕方に灯りがともる · The lanterns glow at dusk",q:"Yasaka Shrine Kyoto"},
+          {ja:"円山公園",en:"Maruyama Park",d:"神社の裏で、のんびり散歩 · A slow walk right behind the shrine",q:"Maruyama Park Kyoto"}]}]} },
+    { icon:"shop", ja:"清水寺周辺でランチ＆カフェ＆ショッピング", en:"Lunch, café and shopping around Kiyomizu-dera",
+      links:[{l:"清水寺 Kiyomizu",u:M("Kiyomizu-dera Kyoto")}],
+      recs:{ja:"清水のおすすめ",en:"Kiyomizu picks",groups:[
+        {h:"ランチ · Lunch",items:[
+          {ja:"奥丹 清水",en:"Okutan Kiyomizu",d:"老舗の湯豆腐で、ほっこり · Yudofu tofu hot pot at a centuries-old shop",q:"Okutan Kiyomizu Kyoto"}]},
+        {h:"カフェ · Cafés",items:[
+          {ja:"スターバックス 二寧坂ヤサカ茶屋店",en:"Starbucks Ninenzaka",d:"町家で畳席のスタバ · A Starbucks in a townhouse, with tatami seats",q:"Starbucks Kyoto Ninenzaka Yasaka Chaya"},
+          {ja:"% Arabica 京都東山",en:"% Arabica Higashiyama",d:"八坂の塔のそばでラテ · Lattes by the Yasaka Pagoda",q:"% Arabica Kyoto Higashiyama"},
+          {ja:"かさぎ屋",en:"Kasagiya",d:"大正創業のぜんざい屋 · Sweet bean zenzai, open since 1914",q:"Kasagiya Sannenzaka Kyoto"}]},
+        {h:"お買い物 · Shopping",items:[
+          {ja:"七味家本舗",en:"Shichimiya Honpo",d:"江戸から続く七味唐辛子 · Spice blends since the Edo era",q:"Shichimiya Honpo Kiyomizu Kyoto"},
+          {ja:"よーじや",en:"Yojiya",d:"あぶらとり紙とコスメ · Kyoto's famous blotting papers",q:"Yojiya Kiyomizu Sannenzaka Kyoto"},
+          {ja:"清水焼の器",en:"Kiyomizu-yaki pottery",d:"五条坂・茶わん坂の器屋さん · Pottery shops on Gojozaka and Chawanzaka",q:"Chawanzaka Kiyomizu-yaki shops Kyoto"}]},
+        {h:"見どころ · Sights",items:[
+          {ja:"清水の舞台",en:"Kiyomizu stage",d:"京都の街を見下ろす木の舞台 · The wooden stage over the city",q:"Kiyomizu-dera Kyoto"},
+          {ja:"三年坂・二年坂",en:"Sannenzaka & Ninenzaka",d:"石段と町家の坂道 · Stone steps lined with townhouses",q:"Sannenzaka Kyoto"}]}]} },
+    { icon:"kaiseki", ja:"京大和で贅沢な懐石ディナー", en:"Kaiseki dinner at Kyo Yamato",
+      links:[{l:"京大和 Site",u:"https://www.kyoyamato.com"},{l:"地図 Map",u:M("Kyo Yamato Kyoto")}] },
+    { icon:"moon", ja:"ホテルのお部屋でゆっくり", en:"Slow evening in our room", links:[] }
+   ]},
+ { id:"day3", date:"2026-11-15", tab:"15 日", tabEn:"Sun", ja:"15日(日) 京都デート3日目", en:"Day 3 · Sun 15 Nov", spot:"nanzenji", color:"var(--d3)", banner:"moon",
+   stops:[
+    { icon:"art", fork:"art", ja:"アートデート", en:"Art date",
+      options:[
+        { key:"teamlab", ja:"チームラボ京都", en:"teamLab Biovortex Kyoto", note:"京都駅の近く · Near Kyoto Station",
+          links:[{l:"地図 Map",u:M("teamLab Biovortex Kyoto")}] },
+        { key:"kyocera", badge:"ジブリ展 開催中", ja:"京都市京セラ美術館", en:"Kyocera Museum of Art", note:"「禅とジブリ」展 · Zen and Studio Ghibli",
+          links:[{l:"ジブリ展 Ghibli",u:"https://zen-ghibli.jp/kyoto/"},{l:"地図 Map",u:M("Kyoto City KYOCERA Museum of Art")}] }],
+      info:"<b>禅とジブリ</b>　10/3〜12/6・10:00〜18:00・月曜休館（日曜OK）・一般 ¥1,900<br><b>Zen and Studio Ghibli</b>: until 6 Dec, 10:00–18:00, closed Mondays (Sunday is open), ¥1,900 per adult." },
+    { icon:"spa", ja:"バンヤンツリーで温泉＆マッサージ", en:"Onsen and massage at Banyan Tree",
+      links:[{l:"スパ Spa",u:"https://www.banyantree.com/japan/kyoto/banyan-tree-spa"},{l:"地図 Map",u:M("Banyan Tree Higashiyama Kyoto")}] },
+    { icon:"cake", ja:"パークハイアット京都でアフタヌーンティー", en:"Afternoon tea at Park Hyatt Kyoto",
+      links:[{l:"ティー Tea",u:"https://www.hyatt.com/park-hyatt/en-US/itmph-park-hyatt-kyoto/dining/afternoon-tea"},{l:"地図 Map",u:M("Park Hyatt Kyoto")}],
+      info:"1階 The Living Room・12:00〜17:00（L.O.）・服装はスマートエレガント<br>The Living Room, 1F. 12:00–17:00 last order. Dress code: smart elegant.",
+      menu:{ja:"メニューの例",en:"Sample menu",note:"季節ごとに替わる5コース。秋のメニューはまだ未発表なので、これは冬のもの。<br>Five courses that change each season. The autumn menu isn't out yet, so this is the winter one for a taste.",
+        sections:[{h:"ウェルカム · Welcome",items:["スパイスローズのフィズティー · Spiced rose fizz tea"]},
+          {h:"セイボリー · Savouries",items:["キャビアのグジェール · Caviar gougère","スモークサーモンとセロリアック · Smoked salmon, celeriac","フォアグラと金柑 · Foie gras, kumquat","冬野菜のテリーヌ · Winter vegetable terrine"]},
+          {h:"コロッケ · Croquette",items:["近江牛と黒トリュフ · Ohmi beef, black truffle"]},
+          {h:"グラニテ · Granité",items:["いちごとシャンパン · Strawberry and champagne"]},
+          {h:"スイーツ · Sweets",items:["マンダリンのタルト · Mandarin tart","カシスのエクレア · Blackcurrant éclair","ピスタチオのムース · Pistachio mousse","プラリネのマカロン · Praline macaron"]},
+          {h:"スフレ · Soufflé",items:["チョコレートスフレ · Chocolate soufflé"]},
+          {h:"お茶 · Tea",items:["コースごとに京都・奈良・滋賀の日本茶 · A Japanese tea from Kyoto, Nara or Shiga with each course"]}]} },
+    { icon:"train", t:"〜19:00", ja:"19:00までに新大阪へ", en:"Back at Shin-Osaka by 7pm",
+      links:[{l:"経路 Route",u:"https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent("Park Hyatt Kyoto")+"&destination="+encodeURIComponent("Shin-Osaka Station")+"&travelmode=transit"}] }
+   ]}
+];
+const PLACES = [
+  {day:0,ja:"カペラ京都",en:"Capella Kyoto",lat:34.9990,lng:135.7722,q:"Capella Kyoto"},
+  {day:0,ja:"建仁寺",en:"Kenninji Temple",lat:35.0006,lng:135.7737,q:"Kenninji Temple Kyoto"},
+  {day:0,ja:"花見小路（祇園）",en:"Hanamikoji, Gion",lat:35.0031,lng:135.7752,q:"Hanamikoji Street Kyoto"},
+  {day:0,ja:"すきやき いろは（先斗町）",en:"Sukiyaki Iroha, Pontocho",lat:35.0045,lng:135.7707,q:"すきやき いろは 先斗町"},
+  {day:1,ja:"真如堂",en:"Shinnyodo Temple",lat:35.0197,lng:135.7921,q:"Shinnyodo Temple Kyoto"},
+  {day:1,ja:"八坂神社",en:"Yasaka Shrine",lat:35.0037,lng:135.7785,q:"Yasaka Shrine Kyoto"},
+  {day:1,ja:"清水寺",en:"Kiyomizu-dera",lat:34.9949,lng:135.7850,q:"Kiyomizu-dera Kyoto"},
+  {day:1,ja:"京大和",en:"Kyo Yamato",lat:34.9994,lng:135.7798,q:"Kyo Yamato Kyoto"},
+  {day:2,ja:"チームラボ京都",en:"teamLab Biovortex Kyoto",lat:34.9808,lng:135.7622,q:"teamLab Biovortex Kyoto"},
+  {day:2,ja:"京都市京セラ美術館",en:"Kyocera Museum of Art",lat:35.0124,lng:135.7826,q:"Kyoto City KYOCERA Museum of Art"},
+  {day:2,ja:"バンヤンツリー東山",en:"Banyan Tree Higashiyama",lat:34.9977,lng:135.7843,q:"Banyan Tree Higashiyama Kyoto"},
+  {day:2,ja:"パークハイアット京都",en:"Park Hyatt Kyoto",lat:34.9982,lng:135.7810,q:"Park Hyatt Kyoto"}
+];
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const el = (tag, cls, html) => { const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; };
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function rng(seed){ let s=seed>>>0||1; return ()=>((s=Math.imul(s^(s>>>15),2246822507)^Math.imul(s^(s>>>13),3266489909), s^=s>>>16)>>>0)/4294967296; }
+function shade(hex,f){ const n=parseInt(hex.slice(1),16); let r=n>>16,g=n>>8&255,b=n&255;
+  if(f<1){r*=f;g*=f;b*=f}else{r+=(255-r)*(f-1);g+=(255-g)*(f-1);b+=(255-b)*(f-1)}
+  return "#"+[r,g,b].map(v=>Math.round(Math.max(0,Math.min(255,v))).toString(16).padStart(2,"0")).join(""); }
+function jstDate(){ return new Date(Date.now()+9*3600e3).toISOString().slice(0,10); }
+const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{ v==null?localStorage.removeItem(k):localStorage.setItem(k,v) }catch(e){} } };
+
+/* ---------- leaf colour state ---------- */
+let override = (()=>{ const v=store.get("leafOverride"); return v===null||v===""?null:Math.max(0,Math.min(4,+v)); })();
+let activeDay = 0;
+function statusFor(d){ return override!==null ? override : FOLIAGE.spots[DAYS[d].spot].s; }
+function palette(d){ return STATUS[statusFor(d)].c; }
+const listeners = [];
+function leafChanged(){ listeners.forEach(f=>f()); }
+
+/* ============================================================
+   MAPLE LEAF GEOMETRY (shared by 2D leaves and 3D tree)
+   ============================================================ */
+function leafPoints(){
+  const D=Math.PI/180, pts=[];
+  const lobes=[{a:-195,L:.5},{a:-160,L:.74},{a:-125,L:.92},{a:-90,L:1},{a:-55,L:.92},{a:-20,L:.74},{a:15,L:.5}];
+  const lp=(a,al,lat)=>[Math.cos(a)*al-Math.sin(a)*lat, Math.sin(a)*al+Math.cos(a)*lat];
+  pts.push([0,0.1]);
+  lobes.forEach((lb,i)=>{
+    const a=lb.a*D, L=lb.L, hw=0.16*L+0.05, N=7;
+    const sa = i===0 ? (lb.a-25)*D : ((lobes[i-1].a+lb.a)/2)*D;
+    const sr = i===0 ? 0.16 : 0.24;
+    pts.push([Math.cos(sa)*sr, Math.sin(sa)*sr]);
+    for(let s=1;s<=N;s++){ const t=s/N, al=0.24+(L-0.24)*t, w=hw*Math.sin(Math.PI*Math.min(.08+t*.9,1))*(1-t*.5), tooth=(s%2?0.04:0)*(1-t*.8); pts.push(lp(a,al,-(w+tooth))); }
+    pts.push(lp(a,L+0.05,0));
+    for(let s=N;s>=1;s--){ const t=s/N, al=0.24+(L-0.24)*t, w=hw*Math.sin(Math.PI*Math.min(.08+t*.9,1))*(1-t*.5), tooth=(s%2?0.04:0)*(1-t*.8); pts.push(lp(a,al,(w+tooth))); }
+    if(i===lobes.length-1){ const ea=(lb.a+25)*D; pts.push([Math.cos(ea)*0.16, Math.sin(ea)*0.16]); }
+  });
+  pts.push([0,0.1]);
+  return {pts, tips:lobes.map(lb=>lp(lb.a*D,lb.L*.9,0))};
+}
+const LEAF = leafPoints();
+function leafPath(){ const p=new Path2D(); LEAF.pts.forEach(([x,y],i)=> i?p.lineTo(x,y):p.moveTo(x,y)); p.closePath(); return p; }
+const LEAF_PATH = leafPath();
+const leafSprites = {};
+function leafSprite(col){
+  if(leafSprites[col]) return leafSprites[col];
+  const S=96, c=document.createElement("canvas"); c.width=c.height=S; const x=c.getContext("2d");
+  x.translate(S/2,S*0.46); x.scale(S*0.42,S*0.42);
+  const g=x.createRadialGradient(0,0,0.05,0,-0.2,1.05); g.addColorStop(0,shade(col,1.18)); g.addColorStop(1,shade(col,.88));
+  x.fillStyle=g; x.fill(LEAF_PATH);
+  x.lineJoin="round"; x.strokeStyle=shade(col,.55); x.lineWidth=0.035; x.stroke(LEAF_PATH);
+  x.strokeStyle=shade(col,.62); x.globalAlpha=.75; x.lineWidth=0.022;
+  LEAF.tips.forEach(([tx,ty])=>{ x.beginPath(); x.moveTo(0,0.06); x.quadraticCurveTo(tx*.4,ty*.5,tx,ty); x.stroke(); });
+  x.globalAlpha=1; x.lineWidth=0.04; x.beginPath(); x.moveTo(0,0.08); x.quadraticCurveTo(0.04,0.4,0.1,0.62); x.stroke();
+  return leafSprites[col]=c;
+}
+
+/* ============================================================
+   PIXEL ICONS (cards) and PIXEL BANNERS (concept-art scenes)
+   ============================================================ */
+const PAL = { w:"#fbf6ee", c:"#dccbb0", k:"#2a2020", p:"#e8899a", o:"#d9893a", b:"#7a4a2a", r:"#c8321f", y:"#f2c45a",
+  s:"#cfd6de", u:"#2f5fa8", h:"#8e5a33", g:"#6f9a3a", m:"#7fb04a", l:"#4aa3c8" };
+function pxCanvas(grid,s,pal){ pal=Object.assign({},PAL,pal||{}); const w=Math.max(...grid.map(r=>r.length)),h=grid.length;
+  const c=document.createElement("canvas"); c.width=w*s;c.height=h*s; const x=c.getContext("2d");
+  grid.forEach((row,yy)=>[...row].forEach((ch,i)=>{ if(!pal[ch])return; x.fillStyle=pal[ch]; x.fillRect(i*s,yy*s,s,s); })); return c; }
+const ICONS = {
+  train:["..ssss..",".ssssss.",".suuuus.",".ssssss.",".uuuuuu.",".ssssss.",".ks..sk.","k......k"],
+  hotel:["...hh...","..hhhh..",".hhhhhh.",".hyhhyh.",".hhhhhh.",".hyhhyh.",".hhkkhh.",".hhkkhh."],
+  lunch:["........","..wwww..",".wwwwww.","rrrrrrrr",".rwrrwr.","..rrrr..","...rr...","........"],
+  torii:["rrrrrrrr",".rrrrrr.","..r..r..",".rrrrrr.","..r..r..","..r..r..","..r..r..",".kk..kk."],
+  pot:["...kk...","..g.og..",".ogoogo.","kkkkkkkk",".kkkkkk.",".kkkkkk.","..kkkk..","........"],
+  onsen:[".w..w..w","w..w..w.",".w..w..w","........","llllllll","lwllllwl","llllllll",".llllll."],
+  moon:["...yyy..","..yy....",".yy.....",".yy.....",".yy.....","..yy....","...yyy..","........"],
+  leaf:["...r....",".r.r.r..","..rrr...","rrrrrrr.",".rrrrr..","..rrr...","...k....","...k...."],
+  shop:["..k..k..","..k..k..",".rrrrrr.",".rrrrrr.",".rrwwrr.",".rrrrrr.",".rrrrrr.","........"],
+  kaiseki:["hhhhhhhh","hwwhrrgh","hwwhrrgh","hhhhhhhh","hgghwwrh","hgghwwrh","hhhhhhhh","........"],
+  art:["hhhhhhhh","huuuuuuh","huyyuuuh","huuuuguh","huuggggh","hggggggh","hhhhhhhh","........"],
+  spa:["...pp...","..pppp..",".pp..pp.","pp.yy.pp",".pp..pp.","..pppp..","...gg...","..g..g.."],
+  cake:["...r....","..www...",".pppppp.",".wwwwww.",".pppppp.",".wwwwww.","hhhhhhhh","........"]
+};
+const ICON_URL = {}; Object.keys(ICONS).forEach(k=> ICON_URL[k]=pxCanvas(ICONS[k],4).toDataURL());
+function icon(k){ const i=new Image(); i.src=ICON_URL[k]; i.className="px-ico ico"; i.alt=""; return i; }
+
+/* --- pixel scene painter --- */
+function Painter(c){ const x=c.getContext("2d"); x.imageSmoothingEnabled=false;
+  const P={x,W:c.width,H:c.height,
+    r(a,b,w,h,col){ x.fillStyle=col; x.fillRect(Math.round(a),Math.round(b),Math.round(w),Math.round(h)); },
+    disc(cx,cy,rad,col,ry){ ry=ry||rad; x.fillStyle=col; for(let dy=-ry;dy<=ry;dy++){ const w=Math.round(rad*Math.sqrt(Math.max(0,1-(dy*dy)/(ry*ry)))); x.fillRect(Math.round(cx-w),Math.round(cy+dy),w*2+1,1);} },
+    poly(pts,col){ x.fillStyle=col; let y0=Infinity,y1=-Infinity; pts.forEach(p=>{y0=Math.min(y0,p[1]);y1=Math.max(y1,p[1]);});
+      for(let y=Math.floor(y0);y<=Math.ceil(y1);y++){ const xs=[]; for(let i=0;i<pts.length;i++){ const a=pts[i],b=pts[(i+1)%pts.length]; if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y)){ xs.push(a[0]+(y-a[1])/(b[1]-a[1])*(b[0]-a[0])); } }
+        xs.sort((p,q)=>p-q); for(let i=0;i+1<xs.length;i+=2) x.fillRect(Math.round(xs[i]),y,Math.round(xs[i+1])-Math.round(xs[i]),1); } },
+    bands(cols,h){ cols.forEach((col,i)=>{ P.r(0,i*h,P.W,h+1,col); if(i){ x.fillStyle=col; for(let px=0;px<P.W;px+=2) x.fillRect(px+(i%2),i*h-1,1,1);} }); },
+    foliage(cx,cy,rad,pal,R,dark){ for(let k=0;k<rad*2.2;k++){ const a=R()*6.28, d=R()*rad; const col=pal[Math.floor(R()*pal.length)]; P.disc(cx+Math.cos(a)*d, cy+Math.sin(a)*d*.8, 1+Math.floor(R()*3), dark?shade(col,dark):col); } }
+  }; return P; }
+
+function paintGion(c,pal){
+  const P=Painter(c), R=rng(7), W=P.W;
+  P.bands(["#4b3570","#6e4385","#9a4e93","#c85d97","#e6708f","#f38a72","#f8a85a","#fac46a","#fbd27a"],7);
+  for(let k=0;k<12;k++){ const cx=R()*W, cy=4+R()*36, w=12+R()*26, col=["#f08aa8","#b85a9a","#ffa0b4","#d36a9e","#8e5a9c"][Math.floor(R()*5)];
+    P.r(cx,cy,w,2,col); P.r(cx+4,cy-2,w*.6,2,col); P.r(cx-3,cy+2,w*.7,1,shade(col,.85)); }
+  const pc=80, pg="#1c1a2a";
+  P.r(pc-1,10,2,18,pg); for(let y=12;y<26;y+=3) P.r(pc-2,y,4,1,pg);
+  [36,32,28,24,20].forEach((w,t)=>{ const ry=60-t*8; P.r(pc-w/2,ry,w,2,pg); P.r(pc-w/2-2,ry-1,3,1,pg); P.r(pc+w/2-1,ry-1,3,1,pg); P.r(pc-w*.28,ry+2,w*.56,6,pg); });
+  P.foliage(30,48,12,pal,R,.35); P.foliage(14,40,10,pal,R,.35);
+  P.poly([[0,34],[34,44],[60,56],[66,80],[0,80]],"#1f2033");
+  for(let i=0;i<4;i++){ const y=38+i*9; P.r(0,y,30+i*10,1,"#3a3550"); }
+  P.poly([[160,28],[128,42],[100,56],[94,80],[160,80]],"#241f31");
+  P.r(140,50,20,30,"#6d2620"); for(let xx=142;xx<160;xx+=4) P.r(xx,50,1,30,"#4c1a16");
+  P.poly([[66,80],[75,62],[85,62],[94,80]],"#3c4466"); P.poly([[74,80],[78,64],[82,64],[86,80]],"#47507a");
+  P.foliage(146,16,14,pal,R,.45); P.foliage(130,28,10,pal,R,.45); P.foliage(152,34,9,pal,R,.45);
+  for(let k=0;k<26;k++) P.disc(120+R()*40, 4+R()*38, 1, pal[Math.floor(R()*pal.length)]);
+  for(let rr=11;rr>2;rr-=3){ P.x.globalAlpha=.12; P.disc(122,46,rr,"#ffc860"); } P.x.globalAlpha=1;
+  P.r(122,48,1,32,"#2a1c1c"); P.r(119,42,7,8,"#ffcf55"); P.r(121,44,3,4,"#fff2b0");
+  P.r(78,66,2,3,"#ffcf5a"); P.r(70,70,2,2,"#e06a3a");
+}
+function paintKiyomizu(c,pal){
+  const P=Painter(c), R=rng(21), W=P.W;
+  P.bands(["#ec98ad","#f0a6aa","#f3b4a2","#f5c39c","#f7d29a","#f8de9e"],7);
+  P.r(0,42,W,5,"#f3d6b0");
+  [[30,8,34],[96,6,40],[120,20,30],[58,24,26],[10,30,20]].forEach(([cx,cy,w])=>{ P.r(cx-1,cy-1,w+2,5,"#5a3a3a"); P.r(cx,cy,w,3,"#f8f1e8"); P.r(cx+3,cy+2,w-6,1,"#d9c9c0"); P.r(cx+6,cy-3,w*.5,3,"#5a3a3a"); P.r(cx+7,cy-2,w*.5-2,2,"#f8f1e8"); });
+  P.r(0,45,W,4,"#b9a7a2"); for(let i=0;i<40;i++) P.r(R()*90,44+R()*4,1+R()*3,1,R()<.5?"#a08e8c":"#d2c2bb");
+  P.poly([[60,80],[70,50],[110,38],[160,30],[160,80]],"#5e3a2a");
+  P.foliage(70,58,14,pal,R,.9); P.foliage(40,56,12,pal,R,.85);
+  const pc=82; P.r(pc-1,14,2,12,"#3a2a28");
+  [[16,38],[13,31],[10,24]].forEach(([w,ry])=>{ P.r(pc-w/2,ry,w,2,"#3a2a28"); P.r(pc-w/2-1,ry-1,2,1,"#3a2a28"); P.r(pc+w/2-1,ry-1,2,1,"#3a2a28"); P.r(pc-w*.3,ry+2,w*.6,5,"#cd4a2c"); });
+  P.r(78,42,8,6,"#cd4a2c");
+  P.poly([[94,42],[146,33],[160,36],[160,47],[90,49]],"#3e2a24"); P.r(90,48,70,1,"#2a1c18");
+  P.r(98,49,62,9,"#6e4428"); for(let i=0;i<8;i++) P.r(101+i*7,51,4,4,"#f4be6a");
+  P.r(94,58,66,1,"#d9a066"); for(let xx=94;xx<160;xx+=4) P.r(xx,57,1,2,"#d9a066");
+  for(let xx=96;xx<160;xx+=4) P.r(xx,59,1,21,"#3a2418"); P.r(94,65,66,1,"#4a2e1e"); P.r(94,72,66,1,"#4a2e1e");
+  for(let i=0;i<14;i++) P.foliage(R()*W, 70+R()*12, 8+R()*6, pal, R);
+  P.foliage(6,6,16,pal,R); P.foliage(22,14,12,pal,R); P.foliage(4,26,10,pal,R,.9);
+}
+function paintMoon(c,pal){
+  const P=Painter(c), R=rng(5), W=P.W;
+  P.bands(["#17152b","#1d1b35","#24223f","#2b2a4a","#343460"],8);
+  for(let i=0;i<46;i++){ P.x.globalAlpha=.4+R()*.6; P.r(R()*W,R()*34,1,1,"#efeaff"); } P.x.globalAlpha=1;
+  for(let rr=15;rr>9;rr-=2){ P.x.globalAlpha=.07; P.disc(118,15,rr,"#dfe6ff"); } P.x.globalAlpha=1;
+  P.disc(118,15,9,"#e2e7ec"); P.disc(121,18,5,"#cfd6dd"); P.r(114,11,2,2,"#bfc6cf"); P.r(119,13,3,2,"#bfc6cf"); P.r(115,19,2,1,"#bfc6cf");
+  P.poly([[0,40],[20,32],[44,37],[70,29],[96,36],[122,30],[146,35],[160,32],[160,46],[0,46]],"#2f3f63");
+  P.poly([[0,44],[30,38],[60,43],[90,37],[130,42],[160,38],[160,48],[0,48]],"#243251");
+  let hx=0; const hc=["#5e4a54","#6b5a4e","#4d4d60","#7a5e4a","#55606a","#6a4a46"];
+  while(hx<112){ const w=10+Math.floor(R()*7), h=9+Math.floor(R()*8), top=50-h, col=hc[Math.floor(R()*hc.length)];
+    P.r(hx,top,w,h,col); P.r(hx-1,top-2,w+2,2,"#353b4f");
+    for(let wy=top+2;wy<48;wy+=4) for(let wx=hx+2;wx<hx+w-2;wx+=4) if(R()<.6) P.r(wx,wy,2,2,R()<.75?"#f7d48a":"#e9a65a");
+    hx+=w+1; }
+  P.r(0,50,W,2,"#3a3442");
+  P.r(0,52,W,28,"#2b4063"); for(let i=0;i<70;i++) P.r(R()*W,53+R()*26,2+R()*6,1,R()<.5?"#33507a":"#24385a");
+  for(let y=53;y<80;y+=2){ P.x.globalAlpha=.5+.5*(1-(y-53)/27); P.r(115+(y%4?1:0),y,4,1,"#a9bad6"); } P.x.globalAlpha=1;
+  P.r(0,66,W,2,"#3b2328"); for(let xx=4;xx<W;xx+=18) P.r(xx,66,2,14,"#3b2328");
+  for(let rr=9;rr>2;rr-=3){ P.x.globalAlpha=.14; P.disc(24,59,rr,"#ffd28a"); } P.x.globalAlpha=1;
+  P.r(22,56,5,7,"#ffd78a"); P.r(22,58,5,1,"#e8a85a"); P.r(23,55,3,1,"#3b2328");
+  P.x.strokeStyle="#2a1c22"; P.r(0,4,20,2,"#2a1c22"); P.r(18,6,14,2,"#2a1c22"); P.r(30,8,10,1,"#2a1c22");
+  P.foliage(10,6,10,pal,R,.75); P.foliage(28,10,9,pal,R,.75); P.foliage(40,8,6,pal,R,.75);
+}
+function lanternGlow(P,cx,cy,r,col){ for(let rr=r;rr>2;rr-=3){ P.x.globalAlpha=.13; P.disc(cx,cy,rr,col||"#ffc860"); } P.x.globalAlpha=1; }
+function steam(P,R,cx,cy,n){ for(let i=0;i<n;i++){ P.x.globalAlpha=.18+R()*.25; const y=cy-R()*14; P.r(cx+Math.sin(y*.5)*3+(R()-.5)*8,y,1+R()*2,2,"#ffffff"); } P.x.globalAlpha=1; }
+function paintTrain(c,pal,night){
+  const P=Painter(c), R=rng(night?41:40), W=P.W;
+  P.bands(night?["#1a1830","#22203c","#2b2a4c","#3a3560","#4c3f6c"]:["#8fb4d8","#a5c2dd","#bdcfe2","#d8d6e0","#efd9d2","#f7dcc8"],8);
+  for(let i=0;i<14;i++){ const w=6+R()*12, h=6+R()*16, x0=R()*W; P.r(x0,46-h,w,h,night?"#2c2c46":"#a4adbf"); if(night) for(let k=0;k<4;k++) P.r(x0+1+R()*(w-2),46-h+1+R()*(h-2),1,1,"#f6d58a"); }
+  P.r(0,46,W,34,night?"#23233a":"#7d8494");
+  P.r(0,54,W,4,night?"#4a4d62":"#c7ccd4"); for(let x=6;x<W;x+=22) P.r(x,58,4,22,night?"#36384c":"#9aa0ab");
+  P.poly([[8,38],[118,38],[142,41],[154,47],[154,53],[8,53]],night?"#d9dde4":"#f4f6f8");
+  P.r(8,47,146,2,"#2f5fa8"); P.r(8,50,146,1,"#2f5fa8");
+  for(let x=12;x<114;x+=6) P.r(x,41,4,3,night?"#f6d58a":"#3b4b66");
+  P.r(146,46,4,2,night?"#fff6c0":"#ffe9a0");
+  if(night){ P.disc(132,12,6,"#e2e7ec"); P.disc(134,14,4,"#cfd6dd"); for(let i=0;i<30;i++) P.r(R()*W,R()*30,1,1,"#efeaff"); }
+  P.foliage(10,70,10,pal,R,night?.6:1); P.foliage(150,72,9,pal,R,night?.6:1);
+}
+function paintKenninji(c,pal){
+  const P=Painter(c), R=rng(52), W=P.W;
+  P.bands(["#f2c1a8","#f4cdb0","#f6d9ba","#f7e3c6","#f6ead4"],7);
+  P.foliage(146,22,16,pal,R); P.foliage(130,30,10,pal,R);
+  P.poly([[10,32],[40,16],[120,16],[150,32]],"#3c3b42"); P.r(6,31,148,2,"#2a2a30"); P.r(4,30,4,1,"#2a2a30"); P.r(152,30,4,1,"#2a2a30");
+  P.r(34,13,92,4,"#46454c"); P.r(76,10,8,3,"#46454c");
+  P.r(30,33,100,17,"#7a5236"); for(let x=34;x<128;x+=10) P.r(x,35,7,13,"#efe6d4"); for(let x=32;x<130;x+=10) P.r(x,33,2,17,"#5a3a26");
+  P.r(24,50,112,3,"#8a8478"); P.r(20,53,120,2,"#a49c8e");
+  P.r(0,55,W,25,"#e9e3d6"); for(let y=57;y<80;y+=2) P.r(0,y,W,1,"#d4ccbc");
+  P.disc(34,66,6,"#5e7f44",4); P.disc(34,66,4,"#6f9350",3);
+  P.poly([[74,72],[82,61],[90,72]],"#8e8a80"); P.r(116,62,12,10,"#5e7f44"); P.r(118,64,8,6,"#6f9350");
+  P.foliage(8,62,9,pal,R,.9);
+}
+function paintSukiyaki(c,pal){
+  const P=Painter(c), R=rng(63), W=P.W;
+  P.r(0,0,W,80,"#191726");
+  P.poly([[0,0],[56,22],[56,58],[0,80]],"#3a2621"); P.poly([[160,0],[104,22],[104,58],[160,80]],"#33221e");
+  for(let i=0;i<7;i++){ const x=4+i*7, y0=4+i*3; P.r(x,y0,1,60-i*6,"#251812"); }
+  for(let i=0;i<7;i++){ const x=154-i*7, y0=4+i*3; P.r(x,y0,1,60-i*6,"#251812"); }
+  P.poly([[56,22],[104,22],[104,58],[56,58]],"#24223a"); P.r(78,26,4,32,"#3a3a5a");
+  [[20,14,7],[40,22,5],[52,27,3],[140,14,7],[120,22,5],[108,27,3]].forEach(([x,y,s])=>{ lanternGlow(P,x,y+s,s*2.4,"#ffb860"); P.r(x-s/2,y,s,s*1.4,"#f6e9d6"); P.r(x-s/2,y+s*.6,s,Math.max(1,s*.25),"#c8321f"); });
+  P.poly([[30,80],[70,58],[90,58],[130,80]],"#4a4a5a"); for(let y=60;y<80;y+=3) P.r(0,y,W,1,"rgba(0,0,0,0)");
+  P.disc(80,70,26,"#2a2626",7); P.disc(80,69,23,"#3b3534",5);
+  const meat=[[68,67],[78,65],[90,67],[84,71],[72,71]]; meat.forEach(([x,y])=>{ P.r(x,y,9,3,"#d8687a"); P.r(x+1,y+1,6,1,"#f3c2c4"); });
+  P.r(62,69,4,3,"#f4efe0"); P.r(95,69,4,3,"#f4efe0"); P.r(98,66,6,1,"#6f9a3a"); P.r(60,65,6,1,"#6f9a3a"); P.r(86,72,3,2,"#f4efe0");
+  steam({x:P.x,r:P.r},R,70,62,26); steam({x:P.x,r:P.r},R,90,62,26);
+  P.foliage(80,6,10,pal,R,.6);
+}
+function paintOnsen(c,pal){
+  const P=Painter(c), R=rng(74), W=P.W;
+  P.bands(["#151428","#1b1a33","#22213e","#2b2a4b"],10);
+  for(let i=0;i<34;i++){ P.x.globalAlpha=.4+R()*.6; P.r(R()*W,R()*36,1,1,"#efeaff"); } P.x.globalAlpha=1;
+  P.disc(126,14,7,"#e2e7ec"); P.disc(128,16,4,"#cfd6dd");
+  for(let x=0;x<W;x+=4) P.r(x,26,3,30,x%8?"#4a3a2c":"#3e3024"); P.r(0,26,W,2,"#2a1f18"); P.r(0,40,W,1,"#2a1f18");
+  P.foliage(16,20,14,pal,R,.8); P.foliage(40,14,10,pal,R,.8); P.foliage(150,30,10,pal,R,.8);
+  P.r(0,56,W,24,"#5a5048");
+  P.r(30,52,100,24,"#c49a62"); P.r(34,55,92,18,"#4f9cc0"); for(let i=0;i<24;i++) P.r(36+R()*86,56+R()*16,3+R()*6,1,R()<.5?"#7cc0de":"#3c86ab");
+  P.r(30,52,100,2,"#d9b47c"); P.r(30,74,100,2,"#a7804c");
+  P.r(110,62,10,3,"#f4efe8");
+  steam({x:P.x,r:P.r},R,60,52,40); steam({x:P.x,r:P.r},R,96,52,40);
+  P.r(140,44,6,12,"#8f8a86"); P.r(138,42,10,3,"#7a7672"); P.r(141,47,4,4,"#ffcf60"); lanternGlow(P,143,49,9);
+}
+function paintShinnyodo(c,pal){
+  const P=Painter(c), R=rng(85), W=P.W;
+  P.bands(["#9cc4e4","#acd0ea","#bfdaee","#d2e4f0","#e3ecf2"],8);
+  [[24,8,30],[100,14,26]].forEach(([x,y,w])=>{ P.r(x,y,w,3,"#f8fbfd"); P.r(x+5,y-2,w*.5,2,"#f8fbfd"); });
+  const pc=58; P.r(pc-1,8,2,12,"#3a2a24");
+  [[30,44],[25,32],[20,21]].forEach(([w,ry])=>{ P.r(pc-w/2,ry,w,3,"#3a3536"); P.r(pc-w/2-2,ry-1,3,1,"#3a3536"); P.r(pc+w/2-1,ry-1,3,1,"#3a3536"); P.r(pc-w*.3,ry+3,w*.6,8,"#6e4a32"); });
+  P.r(pc-10,55,20,6,"#6e4a32");
+  P.poly([[96,40],[110,30],[160,30],[160,44],[92,44]],"#3a3536"); P.r(100,44,60,14,"#7a5236"); for(let x=104;x<160;x+=8) P.r(x,46,5,10,"#efe6d4");
+  P.r(0,61,W,19,"#b9ae98"); P.poly([[60,80],[70,61],[90,61],[100,80]],"#d6ccb6");
+  for(let i=0;i<9;i++) P.foliage(R()*W, 50+R()*24, 9+R()*7, pal, R);
+  P.foliage(10,14,16,pal,R); P.foliage(150,12,14,pal,R); P.foliage(30,30,10,pal,R); P.foliage(88,28,9,pal,R);
+}
+function paintYasaka(c,pal){
+  const P=Painter(c), R=rng(96), W=P.W;
+  P.bands(["#4b3570","#7a4686","#b2558f","#e0708a","#f39470","#f8b866"],7);
+  P.foliage(8,30,16,["#1d2430","#22303a"],R); P.foliage(152,30,16,["#1d2430","#22303a"],R);
+  P.r(30,62,100,18,"#9a9288"); for(let y=64;y<80;y+=4) P.r(30-(y-62),y,100+(y-62)*2,1,"#7f776e");
+  P.poly([[36,26],[52,16],[108,16],[124,26]],"#2e2a30"); P.r(32,25,96,3,"#25212a");
+  P.r(44,28,72,10,"#d23b26"); P.r(52,30,10,6,"#f2ece0"); P.r(98,30,10,6,"#f2ece0");
+  P.poly([[30,42],[46,36],[114,36],[130,42]],"#2e2a30"); P.r(26,41,108,3,"#25212a");
+  P.r(40,44,80,18,"#d23b26"); P.r(70,46,20,16,"#4a1a14"); P.r(46,46,6,16,"#b82e1c"); P.r(108,46,6,16,"#b82e1c");
+  P.r(52,48,10,8,"#f2ece0"); P.r(98,48,10,8,"#f2ece0");
+  for(let x=72;x<90;x+=6){ lanternGlow(P,x+2,50,7); P.r(x,47,5,6,"#f7ead2"); P.r(x,49,5,1,"#c8321f"); }
+  P.foliage(10,8,10,pal,R,.7); P.foliage(150,8,10,pal,R,.7);
+}
+function paintSannenzaka(c,pal){
+  const P=Painter(c), R=rng(107), W=P.W;
+  P.bands(["#a6cbe8","#b5d4ec","#c6ddf0","#d6e6f2"],7);
+  P.foliage(80,14,18,pal,R); P.foliage(70,22,12,pal,R); P.foliage(94,20,12,pal,R);
+  P.poly([[60,80],[74,26],[86,26],[100,80]],"#b8b0a2");
+  for(let y=28;y<80;y+=3){ const half=6+(y-26)*.38; P.r(80-half,y,half*2,1,"#9a9284"); }
+  P.poly([[0,10],[64,26],[60,80],[0,80]],"#6e4a32"); P.poly([[160,6],[96,26],[100,80],[160,80]],"#6a4630");
+  [[0,14,26,"#f0e2c4"],[0,40,34,"#e8d6b0"],[30,24,22,"#efe0c2"]].forEach(([x,y,w,col])=>P.r(x,y,w,10,col));
+  [[128,14,32,"#f0e2c4"],[110,40,50,"#e8d6b0"],[106,24,22,"#efe0c2"]].forEach(([x,y,w,col])=>P.r(x,y,w,10,col));
+  P.poly([[0,8],[64,24],[64,27],[0,12]],"#3a3d4c"); P.poly([[160,4],[96,24],[96,27],[160,8]],"#3a3d4c");
+  [[6,52,"#2f4f7a"],[24,56,"#b8382a"],[118,54,"#3a6a4a"],[138,52,"#2f4f7a"]].forEach(([x,y,col])=>{ P.r(x,y,14,8,col); P.r(x+6,y,1,8,"#f2ece0"); });
+  [[10,66,"#c43a2a"],[132,66,"#e4a032"],[44,62,"#f0c050"]].forEach(([x,y,col])=>{ P.r(x,y,10,6,"#5a3a26"); P.r(x+1,y+1,8,2,col); });
+  [[76,46],[84,56],[79,68]].forEach(([x,y],i)=>{ P.r(x,y,3,5,["#7a4a6a","#c8606a","#2f5f8a"][i]); P.r(x,y-2,3,2,"#2a2020"); });
+}
+function paintKaiseki(c,pal){
+  const P=Painter(c), R=rng(118), W=P.W;
+  P.r(0,0,W,52,"#3a2a22"); P.r(0,0,W,6,"#2a1c16");
+  P.r(14,8,132,40,"#f2e6c8"); for(let x=14;x<146;x+=11) P.r(x,8,1,40,"#8a6a48"); for(let y=8;y<48;y+=10) P.r(14,y,132,1,"#8a6a48");
+  P.x.globalAlpha=.35; P.foliage(50,30,12,pal,R,.8); P.foliage(110,26,10,pal,R,.8); P.x.globalAlpha=1;
+  P.r(0,52,W,28,"#c9b98a"); for(let x=0;x<W;x+=40) P.r(x,52,1,28,"#a8986a"); P.r(0,66,W,1,"#a8986a");
+  P.r(24,58,112,14,"#3a1814"); P.r(24,58,112,2,"#5a2a20"); P.r(28,72,4,6,"#2a100e"); P.r(128,72,4,6,"#2a100e");
+  [[34,54,10,"#2a2a30"],[50,55,8,"#f4efe4"],[64,54,12,"#7a2a20"],[82,55,8,"#f4efe4"],[96,54,10,"#2a2a30"],[112,55,10,"#c8a050"]].forEach(([x,y,w,col])=>{ P.r(x,y,w,4,col); P.r(x+2,y,w-4,1,shade(col,1.25)); });
+  P.r(54,54,4,1,"#e86a5a"); P.r(68,54,4,1,"#6f9a3a"); P.r(98,54,6,1,"#f0c070");
+  P.r(146,40,8,14,"#efe2c0"); P.r(147,42,6,10,"#ffe2a0"); lanternGlow(P,150,47,14,"#ffd890");
+}
+function paintOkazaki(c,pal){
+  const P=Painter(c), R=rng(129), W=P.W;
+  P.bands(["#86b6e0","#9cc4e6","#b2d2ec","#c8def0","#dce8f2"],8);
+  P.poly([[0,40],[30,28],[60,34],[90,26],[130,32],[160,28],[160,48],[0,48]],"#5e7f6a");
+  P.r(0,40,62,24,"#8a5a44"); P.poly([[0,40],[6,30],[56,30],[62,40]],"#46464e"); for(let x=4;x<58;x+=7) P.r(x,44,4,8,"#f0e2c4"); P.r(26,52,10,12,"#4a2a20");
+  P.r(0,64,W,16,"#c9c2b4"); P.r(0,64,W,2,"#a49c8e");
+  P.foliage(70,52,12,pal,R); P.foliage(150,56,12,pal,R); P.foliage(120,60,9,pal,R);
+  const tc="#d0341f";
+  P.r(84,8,72,4,tc); P.r(80,6,6,3,tc); P.r(154,6,6,3,tc); P.r(86,12,68,2,"#2a2224"); P.r(84,22,72,3,tc);
+  P.r(94,12,6,58,tc); P.r(140,12,6,58,tc); P.r(117,14,6,8,"#2a2224"); P.r(93,68,8,4,"#2a2224"); P.r(139,68,8,4,"#2a2224");
+}
+function paintTeamlab(c,pal){
+  const P=Painter(c), R=rng(140), W=P.W;
+  P.r(0,0,W,80,"#0b0c1a");
+  const cols=["#ff5fa8","#5fd3ff","#ffd35f","#8f7bff","#5fff9e"];
+  for(let i=0;i<700;i++){ const a=i*.11, rad=2+i*.09; const x=80+Math.cos(a)*rad*1.6, y=40+Math.sin(a)*rad*.8; if(x<0||x>W||y<0||y>80) continue; P.x.globalAlpha=.3+.7*(1-i/700); P.r(x,y,1,1,cols[i%5]); }
+  P.x.globalAlpha=1;
+  for(let i=0;i<14;i++){ const x=R()*W, y=R()*80, col=cols[Math.floor(R()*5)], r=2+R()*4; for(let rr=r*2.4;rr>r;rr-=1.5){ P.x.globalAlpha=.12; P.disc(x,y,rr,col); } P.x.globalAlpha=1; P.disc(x,y,r,col); P.disc(x-r*.3,y-r*.3,Math.max(1,r*.35),"#ffffff"); }
+  P.r(0,70,W,10,"#141633"); for(let x=0;x<W;x+=3){ P.x.globalAlpha=.35; P.r(x,71+R()*8,1,1,cols[x%5]); } P.x.globalAlpha=1;
+}
+function paintBanyan(c,pal){
+  const P=Painter(c), R=rng(151), W=P.W;
+  P.bands(["#e8a6b4","#efb6a8","#f4c6a0","#f6d5a2","#f2dcb6"],7);
+  P.r(0,36,W,6,"#b8a8a8"); for(let i=0;i<40;i++) P.r(R()*W,36+R()*5,1+R()*3,1,R()<.5?"#a08e8c":"#d2c2bb");
+  P.poly([[0,24],[40,30],[70,40],[0,52]],"#4e5e3e");
+  for(let i=0;i<8;i++) P.foliage(R()*60, 28+R()*20, 8+R()*6, pal, R);
+  P.r(0,52,W,28,"#6e5440"); for(let y=54;y<80;y+=4) P.r(0,y,W,1,"#5a4432");
+  P.r(56,46,96,22,"#3c3a38"); P.r(60,49,88,15,"#5aa6c6"); for(let i=0;i<20;i++) P.r(62+R()*80,50+R()*13,3+R()*6,1,R()<.5?"#86c4de":"#3f8aae");
+  steam({x:P.x,r:P.r},R,86,46,34); steam({x:P.x,r:P.r},R,124,46,34);
+  P.r(130,22,24,24,"#4a3a2c"); P.poly([[126,22],[142,12],[158,22]],"#2e2a2a"); P.r(136,30,12,8,"#ffd890"); lanternGlow(P,142,34,12,"#ffd890");
+  P.foliage(150,8,12,pal,R);
+}
+function paintTea(c,pal){
+  const P=Painter(c), R=rng(162), W=P.W;
+  P.r(0,0,W,80,"#3a2c26");
+  P.bands(["#6e4385","#a8508f","#e0708a","#f39470","#f8b866"],9); P.r(0,0,14,80,"#3a2c26"); P.r(146,0,14,80,"#3a2c26");
+  const pc=62,pg="#2a2236"; P.r(pc-1,6,2,12,pg); [[24,40],[21,34],[18,28],[15,22],[12,16]].forEach(([w,ry])=>{ P.r(pc-w/2,ry,w,2,pg); P.r(pc-w*.28,ry+2,w*.56,4,pg); });
+  P.poly([[14,40],[50,46],[90,44],[146,38],[146,46],[14,46]],"#2c2838");
+  P.foliage(130,30,12,pal,R,.8);
+  P.r(14,0,2,46,"#5a4438"); P.r(144,0,2,46,"#5a4438"); P.r(14,22,132,1,"#5a4438");
+  P.r(0,46,W,34,"#f2ece4"); P.r(0,46,W,2,"#d8cfc4");
+  P.r(97,26,2,40,"#c8a24a"); [[38,"#c8a24a"],[50,"#c8a24a"],[62,"#c8a24a"]].forEach(([y,col],i)=>{ const w=26-i*4; P.r(98-w/2,y,w,2,col); });
+  [[86,34,"#e8869a"],[92,35,"#7a4a2a"],[101,34,"#f0c050"],[106,35,"#a6c46a"],[88,46,"#f4efe4"],[96,46,"#c8506a"],[104,46,"#e8a04a"],[84,58,"#f6d0d8"],[92,58,"#7a4a2a"],[100,58,"#f0c050"],[108,58,"#e8869a"]].forEach(([x,y,col])=>{ P.r(x,y,5,3,col); P.r(x+1,y,3,1,shade(col,1.25)); });
+  [[30,60],[124,62]].forEach(([x,y])=>{ P.r(x,y,14,8,"#ffffff"); P.r(x+1,y+1,12,3,"#a8743a"); P.r(x+14,y+2,3,4,"#ffffff"); P.r(x-3,y+8,20,2,"#e6e0d6"); });
+  steam({x:P.x,r:P.r},R,36,60,12); steam({x:P.x,r:P.r},R,130,62,12);
+}
+/* each day is a strip of scenes in the order we visit */
+const SCENES = {
+  day1:[{f:(c,p)=>paintTrain(c,p,false),ja:"新大阪で待ち合わせ",en:"Shin-Osaka"},{f:paintKenninji,ja:"建仁寺",en:"Kenninji"},{f:paintGion,ja:"祇園・八坂の塔",en:"Gion at dusk"},{f:paintSukiyaki,ja:"先斗町 いろは",en:"Sukiyaki, Pontocho"},{f:paintOnsen,ja:"貸切温泉",en:"Private onsen"}],
+  day2:[{f:paintShinnyodo,ja:"真如堂",en:"Shinnyodo"},{f:paintYasaka,ja:"八坂神社",en:"Yasaka Shrine"},{f:paintKiyomizu,ja:"清水の舞台",en:"Kiyomizu-dera"},{f:paintSannenzaka,ja:"三年坂でお買い物",en:"Sannenzaka"},{f:paintKaiseki,ja:"京大和の懐石",en:"Kaiseki dinner"}],
+  day3:[{f:paintTeamlab,ja:"チームラボ",en:"teamLab"},{f:paintOkazaki,ja:"京セラ美術館・大鳥居",en:"Okazaki & Kyocera"},{f:paintBanyan,ja:"バンヤンツリー",en:"Banyan Tree spa"},{f:paintTea,ja:"アフタヌーンティー",en:"Afternoon tea"},{f:(c,p)=>paintTrain(c,p,true),ja:"また来ようね",en:"Home by 7pm"}]
+};
+
+/* ============================================================
+   WEATHER ICONS
+   ============================================================ */
+function wxIcon(kind){
+  const sun='<circle cx="13" cy="13" r="6" fill="#f6b23a"/>'+[0,45,90,135,180,225,270,315].map(a=>{const r=a*Math.PI/180;return `<line x1="${13+Math.cos(r)*8.5}" y1="${13+Math.sin(r)*8.5}" x2="${13+Math.cos(r)*11}" y2="${13+Math.sin(r)*11}" stroke="#f6b23a" stroke-width="2" stroke-linecap="round"/>`}).join("");
+  const cloud=(dx,dy,f)=>`<g transform="translate(${dx} ${dy})"><path d="M8 26h17a6 6 0 0 0 0-12 8 8 0 0 0-15-2 6 6 0 0 0-2 14z" fill="${f}" stroke="#5c5368" stroke-width="1.5"/></g>`;
+  const inner = kind==="sun"?sun : kind==="cloud"?cloud(2,0,"#e6e1ea") : kind==="rain"?cloud(2,-2,"#d8d4e2")+'<path d="M12 27l-2 4M18 27l-2 4M24 27l-2 4" stroke="#4a8fd0" stroke-width="2" stroke-linecap="round"/>' : sun+cloud(6,6,"#f4f0f6");
+  return `<svg viewBox="0 0 36 36" aria-hidden="true">${inner}</svg>`;
+}
+
+/* ============================================================
+   INTRO + COUNTDOWN
+   ============================================================ */
+const today = jstDate();
+const DAY_MS=864e5, start=Date.parse("2026-11-13T00:00:00+09:00");
+const daysLeft = Math.ceil((start-Date.now())/DAY_MS);
+const tripDayIdx = DAYS.findIndex(d=>d.date===today);
+$("#count").innerHTML = daysLeft>0 ? `<b>あと${daysLeft}日</b><span>${daysLeft} day${daysLeft>1?"s":""} to go</span>`
+  : tripDayIdx>=0 ? `<b>${tripDayIdx+1}日目</b><span>Today is day ${tripDayIdx+1}</span>` : `<b>おつかれさま</b><span>What a trip</span>`;
+
+/* ============================================================
+   FOLIAGE METER
+   ============================================================ */
+function renderMeter(){
+  const box=$("#spots"); box.innerHTML="";
+  DAYS.forEach((d,i)=>{ const sp=FOLIAGE.spots[d.spot], st=STATUS[sp.s];
+    const row=el("div","spot"); row.style.setProperty("--dc",d.color);
+    row.appendChild(el("div","day",`${i+1}日目<br>Day ${i+1}`));
+    row.appendChild(el("div","nm",`${sp.ja}<small>${sp.en}</small>`));
+    const bar=el("div","bar"); bar.style.setProperty("--c",st.c[0]);
+    STATUS.forEach((_,k)=>bar.appendChild(el("i",k<=sp.s?"on":null)));
+    bar.appendChild(el("em",null,`${st.ja} · ${st.en}`)); row.appendChild(bar); box.appendChild(row); });
+  const [,am,ad]=FOLIAGE.asOf.split("-").map(Number), a={getMonth:()=>am-1,getDate:()=>ad,toLocaleString:()=>["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][am-1]};
+  $("#src").innerHTML=`京阪電車の紅葉情報（${a.getMonth()+1}月${a.getDate()}日時点・毎週火金更新）<br>Keihan foliage report as of ${a.getDate()} ${a.toLocaleString("en",{month:"short",timeZone:"Asia/Tokyo"})}, updated Tuesdays and Fridays · <a href="${FOLIAGE.source}" target="_blank" rel="noopener">見る View</a>`;
+}
+renderMeter();
+
+/* ============================================================
+   DAY TABS + PANEL
+   ============================================================ */
+const tabs=$("#tabs"), panelEl=$("#panel");
+const tabBtns = DAYS.map((d,i)=>{
+  const b=el("button",null,`<b>${d.tab}</b><span>${d.tabEn} · ${i+1}日目</span>${tripDayIdx===i?'<span class="today">きょう Today</span>':""}`);
+  b.setAttribute("role","tab"); b.style.setProperty("--dc",d.color); b.id="tab-"+d.id;
+  b.addEventListener("click",()=>{ showDay(i,true); }); tabs.appendChild(b); return b; });
+
+function linksEl(list){ const d=el("div","links"); list.forEach(k=>{ const a=el("a",null,k.l); a.href=k.u; a.target="_blank"; a.rel="noopener"; d.appendChild(a); }); return d; }
+function recsEl(r){
+  const det=el("details","recs"); det.appendChild(el("summary",null,`${r.ja} <small>${r.en}</small>`));
+  r.groups.forEach(g=>{ const grp=el("div","grp"); grp.appendChild(el("h4",null,g.h));
+    g.items.forEach(it=>{ const row=el("div","rec"); row.appendChild(el("div","n",`${it.ja}<span>${it.en}</span>`)); row.appendChild(el("div","d",it.d));
+      const a=el("a",null,"地図 ↗"); a.href=M(it.q); a.target="_blank"; a.rel="noopener"; a.setAttribute("aria-label",`${it.en} on Google Maps`); row.appendChild(a); grp.appendChild(row); });
+    det.appendChild(grp); });
+  return det;
+}
+function menuEl(mn){
+  const det=el("details","recs menu"); det.appendChild(el("summary",null,`${mn.ja} <small>${mn.en}</small>`));
+  if(mn.note) det.appendChild(el("p","mnote",mn.note));
+  mn.sections.forEach(sc=>{ const g=el("div","grp"); g.appendChild(el("h4",null,sc.h)); const ul=el("ul");
+    sc.items.forEach(it=>{ const [ja,en]=it.split(" · "); ul.appendChild(el("li",null,`${ja}${en?`<span>${en}</span>`:""}`)); }); g.appendChild(ul); det.appendChild(g); });
+  return det;
+}
+let dayView=null;
+function showDay(i,user){
+  activeDay=i;
+  tabBtns.forEach((b,k)=>b.setAttribute("aria-selected",k===i?"true":"false"));
+  if(user){ try{ history.replaceState(null,"","#"+DAYS[i].id); }catch(e){ location.hash=DAYS[i].id; } }
+  const d=DAYS[i]; panelEl.innerHTML=""; panelEl.style.setProperty("--dc",d.color);
+  const sec=el("section","panel"); sec.setAttribute("role","tabpanel"); sec.setAttribute("aria-labelledby","tab-"+d.id);
+
+  const ban=el("div","banner"), strip=el("div","strip"), scenes=SCENES[d.id], dots=el("div","dots");
+  const cvs=scenes.map((sc,k)=>{ const f=el("figure","scene"); const cv=el("canvas","px"); cv.width=160; cv.height=80; cv.setAttribute("role","img"); cv.setAttribute("aria-label",sc.en);
+    f.appendChild(cv); f.appendChild(el("figcaption",null,`${sc.ja}<small>${sc.en}</small>`)); strip.appendChild(f);
+    const b=el("button"); b.setAttribute("aria-label",`${sc.en}`); b.addEventListener("click",()=>goScene(k,true)); dots.appendChild(b); return cv; });
+  ban.append(strip,dots);
+  let si=0, pauseUntil=0;
+  const markDot=()=>[...dots.children].forEach((b,k)=>b.setAttribute("aria-current",String(k===si)));
+  function goScene(k,user){ si=(k+scenes.length)%scenes.length; strip.scrollTo({left:si*strip.clientWidth,behavior:reduce?"auto":"smooth"}); markDot(); if(user) pauseUntil=Date.now()+12000; }
+  strip.addEventListener("scroll",()=>{ const k=Math.round(strip.scrollLeft/Math.max(1,strip.clientWidth)); if(k!==si){ si=k; markDot(); } },{passive:true});
+  ["pointerdown","touchstart","wheel"].forEach(ev=>strip.addEventListener(ev,()=>pauseUntil=Date.now()+12000,{passive:true}));
+  markDot(); clearInterval(window.__sceneTimer);
+  if(!reduce) window.__sceneTimer=setInterval(()=>{ if(Date.now()>pauseUntil && !document.hidden && strip.isConnected) goScene(si+1,false); },4800);
+  const w=WEATHER.days[d.date];
+  if(w){ const wx=el("div","wx",`${wxIcon(w.icon)}<div><b>${w.hi}° / ${w.lo}°</b>${w.rain!=null?` · ☂ ${w.rain}%`:""}<small>${w.type==="normal"?"平年値 · Typical mid-Nov":`${w.ja} · ${w.en}<br>${w.live?"最新の予報 · Live forecast":`予報 ${+WEATHER.updated.slice(5,7)}/${+WEATHER.updated.slice(8)}時点 · As of ${+WEATHER.updated.slice(8)} Nov`}`}</small></div>`); ban.appendChild(wx); }
+  sec.appendChild(ban);
+
+  const st=STATUS[FOLIAGE.spots[d.spot].s];
+  const head=el("div","dayhead"); head.appendChild(el("h2",null,`${d.ja}<span>${d.en}</span>`));
+  const pill=el("span","pill",`<i></i>${FOLIAGE.spots[d.spot].ja.replace(/（.*）/,"")} ${st.ja}`); pill.style.setProperty("--c",st.c[0]); head.appendChild(pill);
+  sec.appendChild(head);
+  const wl=el("a","wxlink",`最新の天気予報 · Latest forecast ↗`); wl.href=WEATHER.link; wl.target="_blank"; wl.rel="noopener"; sec.appendChild(wl);
+
+  const tl=el("div","timeline"); const walker=el("div","walker");
+  const duo=new Image(); duo.className="duo"; duo.alt=""; if(DUO_FRAMES[0]) duo.src=DUO_FRAMES[0]; else duo.hidden=true;
+  const prop=el("div","prop"); const pimg=new Image(); pimg.alt=""; prop.appendChild(pimg);
+  walker.append(prop,duo); tl.appendChild(walker);
+  const stopEls=[];
+  d.stops.forEach(s=>{
+    const c=el("article","stop"); c.dataset.icon=s.icon;
+    const row=el("div","row"); row.appendChild(icon(s.icon)); const body=el("div");
+    if(s.t) body.appendChild(el("div","t",s.t));
+    body.appendChild(el("div","ja",s.ja)); body.appendChild(el("div","en",s.en)); row.appendChild(body); c.appendChild(row);
+    if(s.links&&s.links.length) c.appendChild(linksEl(s.links));
+    if(s.options){
+      const f=el("div","fork"); let pick=null, why="";
+      if(s.fork==="momiji"){ const lvl=FOLIAGE.spots.shinnyodo.s; pick=(lvl>=1&&lvl<=3)?"shinnyodo":"yasaka";
+        why = pick==="shinnyodo" ? `真如堂は「${STATUS[lvl].ja}」→ 真如堂へ！ · Shinnyodo is ${STATUS[lvl].en.toLowerCase()}, so we go there.`
+          : lvl===0 ? "真如堂はまだ青葉 → 八坂神社へ · Shinnyodo is still green, so Yasaka Shrine it is."
+          : "真如堂はもう落葉 → 八坂神社へ · Shinnyodo's leaves have fallen, so Yasaka Shrine."; }
+      else why="その日の気分で決めよう · We'll choose on the day.";
+      s.options.forEach(o=>{ const oc=el("div","opt"+(o.key===pick?" pick":""));
+        if(o.key===pick) oc.appendChild(el("span","badge","おすすめ Pick")); else if(o.badge) oc.appendChild(el("span","badge",o.badge));
+        oc.appendChild(el("div","ja",o.ja)); oc.appendChild(el("div","en",o.en)); if(o.note) oc.appendChild(el("div","en",o.note));
+        oc.appendChild(linksEl(o.links)); f.appendChild(oc); });
+      c.appendChild(f); c.appendChild(el("div","why",why));
+      if(pick) c.dataset.icon = pick==="shinnyodo"?"leaf":"torii";
+    }
+    if(s.info) c.appendChild(el("div","info",s.info));
+    if(s.recs) c.appendChild(recsEl(s.recs));
+    if(s.menu) c.appendChild(menuEl(s.menu));
+    tl.appendChild(c); stopEls.push(c);
+  });
+  sec.appendChild(tl); panelEl.appendChild(sec);
+  dayView={d,cvs,walker,duo,pimg,stopEls,cur:-1};
+  drawBanner(); placeWalker(true); leafChanged();
+}
+function drawBanner(){ if(!dayView) return; const pal=palette(activeDay); dayView.cvs.forEach((c,k)=>{ c.getContext("2d").clearRect(0,0,160,80); SCENES[dayView.d.id][k].f(c,pal); }); }
+function placeWalker(force){
+  if(!dayView) return; const vh=innerHeight; let idx=0;
+  dayView.stopEls.forEach((s,k)=>{ if(s.getBoundingClientRect().top < vh*0.5) idx=k; });
+  if(idx===dayView.cur && !force) return; dayView.cur=idx;
+  const s=dayView.stopEls[idx];
+  dayView.stopEls.forEach((x,k)=>x.classList.toggle("here",k===idx));
+  dayView.walker.style.transform=`translateY(${s.offsetTop+6}px)`;
+  dayView.pimg.src=ICON_URL[s.dataset.icon]; dayView.walker.classList.add("has-prop");
+}
+let ticking=false;
+addEventListener("scroll",()=>{ if(!ticking){ ticking=true; requestAnimationFrame(()=>{ ticking=false; placeWalker(false); }); } },{passive:true});
+addEventListener("resize",()=>placeWalker(true));
+listeners.push(drawBanner);
+
+/* ============================================================
+   LEAF COLOUR SWITCH
+   ============================================================ */
+const lbtn=$("#leafbtn"), lpop=$("#leafpop"), sw=$("#swatches");
+function renderLeafBtn(){
+  const col=palette(activeDay)[0];
+  const d=LEAF.pts.map(([x,y],i)=>(i?"L":"M")+x.toFixed(3)+" "+y.toFixed(3)).join("")+"Z";
+  $("#leafbtnIcon").innerHTML=`<path d="${d}" fill="${col}" stroke="${shade(col,.55)}" stroke-width=".05" stroke-linejoin="round"/><path d="M0 .08 Q.04 .4 .1 .62" stroke="${shade(col,.55)}" stroke-width=".06" fill="none"/>`;
+  sw.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.v===(override===null?"auto":String(override)))));
+}
+[{v:"auto",ja:"自動",en:"Live",c:null},...STATUS.map((s,i)=>({v:String(i),ja:s.ja,en:s.en,c:s.c[0]}))].forEach(o=>{
+  const b=el("button",null,`<i></i><span>${o.ja}<br><small>${o.en}</small></span>`); b.dataset.v=o.v;
+  b.style.setProperty("--c", o.c || "conic-gradient(#6b8f3a 0 25%,#e0a92a 0 50%,#cf3322 0 75%,#7a5434 0)");
+  b.addEventListener("click",()=>{ override = o.v==="auto"?null:+o.v; store.set("leafOverride", override===null?null:String(override)); leafChanged(); });
+  sw.appendChild(b); });
+lbtn.addEventListener("click",()=>{ const open=lpop.hidden; lpop.hidden=!open; lbtn.setAttribute("aria-expanded",String(open)); });
+document.addEventListener("click",e=>{ if(!lpop.hidden && !lpop.contains(e.target) && !lbtn.contains(e.target)){ lpop.hidden=true; lbtn.setAttribute("aria-expanded","false"); } });
+listeners.push(renderLeafBtn);
+
+/* ============================================================
+   FALLING LEAVES (2D canvas, real maple outlines)
+   ============================================================ */
+const fall=$("#leaves");
+let recolorFalling=()=>{};
+if(!reduce){
+  const ctx=fall.getContext("2d"); let W=0,H=0,dpr=1;
+  const size=()=>{ dpr=Math.min(devicePixelRatio||1,2); W=innerWidth; H=innerHeight; fall.width=W*dpr; fall.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); };
+  size(); addEventListener("resize",size);
+  const N = W<520 ? 16 : 26, leaves=[];
+  const pick=()=>{ const p=palette(activeDay); return p[Math.floor(Math.random()*p.length)]; };
+  const spawn=(l,top)=>Object.assign(l,{x:Math.random()*W, y:top?-40:Math.random()*H, vy:.45+Math.random()*.7, amp:18+Math.random()*30, ph:Math.random()*6.28,
+    sp:.01+Math.random()*.016, rot:Math.random()*6.28, vr:(Math.random()-.5)*.03, flip:Math.random()*6.28, vf:.02+Math.random()*.035, size:20+Math.random()*20, col:pick()});
+  for(let i=0;i<N;i++) leaves.push(spawn({},false));
+  recolorFalling=()=>leaves.forEach(l=>l.col=pick());
+  let visible=true; document.addEventListener("visibilitychange",()=>{visible=!document.hidden; if(visible) requestAnimationFrame(frame);});
+  function frame(){
+    if(!visible) return;
+    ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+    for(const l of leaves){
+      l.y+=l.vy; l.ph+=l.sp; l.rot+=l.vr+Math.sin(l.ph)*.004; l.flip+=l.vf;
+      const x=l.x+Math.sin(l.ph)*l.amp, s=l.size, fx=Math.cos(l.flip);
+      ctx.setTransform(dpr,0,0,dpr,0,0); ctx.translate(x,l.y); ctx.rotate(l.rot); ctx.scale(Math.abs(fx)<.08?.08*Math.sign(fx||1):fx,1);
+      ctx.globalAlpha=.92; ctx.drawImage(leafSprite(fx<0?shade(l.col,.85):l.col),-s/2,-s/2,s,s);
+      if(l.y>H+40) spawn(l,true);
+    }
+    ctx.globalAlpha=1; requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+listeners.push(()=>recolorFalling());
+
+/* ============================================================
+   THREE.JS FELT DIORAMA
+   ============================================================ */
+let DUO_FRAMES=[];
+let recolorTree=()=>{};
+function initHero(){
+  const host=$("#hero");
+  let ok=false;
+  try{ ok = !!window.THREE && !!document.createElement("canvas").getContext("webgl"); }catch(e){}
+  if(!ok){ const c=el("canvas","px fallback"); c.width=160;c.height=80; host.prepend(c); paintGion(c,palette(0)); listeners.push(()=>paintGion(c,palette(activeDay))); return; }
+  const T=THREE, W=host.clientWidth, H=host.clientHeight;
+  const ren=new T.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+  ren.setPixelRatio(Math.min(devicePixelRatio||1,2)); ren.setSize(W,H); ren.outputEncoding=T.sRGBEncoding;
+  ren.shadowMap.enabled=true; ren.shadowMap.type=T.PCFSoftShadowMap; host.prepend(ren.domElement);
+  const scene=new T.Scene();
+  const cam=new T.PerspectiveCamera(34,W/H,.1,60); const camBase=new T.Vector3(0.1,1.75,8.2), look=new T.Vector3(0.08,1.05,0);
+  scene.add(new T.HemisphereLight(0xffe2cc,0x40304a,.75));
+  const key=new T.DirectionalLight(0xffd2a8,1.05); key.position.set(3.5,6,5); key.castShadow=true; key.shadow.mapSize.set(1024,1024);
+  Object.assign(key.shadow.camera,{left:-4,right:4,top:4,bottom:-2,near:1,far:20}); key.shadow.radius=4; scene.add(key);
+  const rim=new T.DirectionalLight(0xff9ac0,.55); rim.position.set(-4,3,-3); scene.add(rim);
+
+  /* felt texture */
+  const ft=document.createElement("canvas"); ft.width=ft.height=128; const fx=ft.getContext("2d"); fx.fillStyle="#fff"; fx.fillRect(0,0,128,128);
+  const R=rng(11); for(let i=0;i<1600;i++){ fx.fillStyle=`rgba(${R()<.5?"120,100,80":"255,255,255"},${.05+R()*.12})`; fx.fillRect(R()*128,R()*128,1+R()*2,1); }
+  const felt=new T.CanvasTexture(ft); felt.wrapS=felt.wrapT=T.RepeatWrapping;
+  const mat=(col,o)=>new T.MeshStandardMaterial(Object.assign({color:col,roughness:1,metalness:0,map:felt},o||{}));
+
+  /* backdrop: the little Kyoto shop from the first version — tiled wall, round shoji window, beams, lanterns, sign */
+  const set=new T.Group(); scene.add(set);
+  const tc=document.createElement("canvas"); tc.width=tc.height=64; const tx=tc.getContext("2d");
+  tx.fillStyle="#f4ece0"; tx.fillRect(0,0,64,64); tx.fillStyle="rgba(200,50,31,.6)"; tx.fillRect(58,0,6,64); tx.fillRect(0,58,64,6);
+  for(let k=0;k<120;k++){ tx.fillStyle=`rgba(120,90,70,${Math.random()*.05})`; tx.fillRect(Math.random()*58,Math.random()*58,2,2); }
+  const ttex=new T.CanvasTexture(tc); ttex.wrapS=ttex.wrapT=T.RepeatWrapping; ttex.repeat.set(26,14); ttex.encoding=T.sRGBEncoding;
+  const wall=new T.Mesh(new T.PlaneGeometry(13,7),new T.MeshStandardMaterial({map:ttex,roughness:.85})); wall.position.set(0,3.2,-3.2); wall.receiveShadow=true; set.add(wall);
+  const wood=new T.MeshStandardMaterial({color:0x6e4126,roughness:.8}), wood2=new T.MeshStandardMaterial({color:0x8e5a33,roughness:.8});
+  const wc2=document.createElement("canvas"); wc2.width=wc2.height=256; const wx2=wc2.getContext("2d");
+  const gr=wx2.createRadialGradient(128,128,10,128,128,128); gr.addColorStop(0,"#fde3a0"); gr.addColorStop(1,"#efb066"); wx2.fillStyle=gr; wx2.fillRect(0,0,256,256);
+  wx2.fillStyle="#8e5a33"; for(let k=28;k<256;k+=34){ wx2.fillRect(k,0,5,256); wx2.fillRect(0,k,256,5); }
+  const wtex2=new T.CanvasTexture(wc2); wtex2.encoding=T.sRGBEncoding;
+  const win=new T.Mesh(new T.CircleGeometry(1.2,56),new T.MeshBasicMaterial({map:wtex2})); win.position.set(-.3,2.55,-3.17); set.add(win);
+  const halo=new T.Mesh(new T.CircleGeometry(1.75,56),new T.MeshBasicMaterial({color:0xffc870,transparent:true,opacity:.18,depthWrite:false})); halo.position.set(-.3,2.55,-3.18); set.add(halo);
+  const ring=new T.Mesh(new T.TorusGeometry(1.24,.1,12,64),wood); ring.position.set(-.3,2.55,-3.12); ring.castShadow=true; set.add(ring);
+  const glowL=new T.PointLight(0xffc070,.9,7,2); glowL.position.set(-.3,2.5,-2.2); set.add(glowL);
+  const sc2=document.createElement("canvas"); sc2.width=128; sc2.height=420; const sx=sc2.getContext("2d");
+  const drawSign=()=>{ sx.fillStyle="#fffaf0"; sx.fillRect(0,0,128,420); sx.strokeStyle="#c8321f"; sx.lineWidth=12; sx.strokeRect(6,6,116,408);
+    sx.fillStyle="#231b17"; sx.textAlign="center"; sx.textBaseline="middle"; sx.font='700 64px "Kaisei Decol","Hiragino Mincho ProN",serif'; sx.fillText("京",64,82); sx.fillText("都",64,160);
+    sx.fillStyle="#c8321f"; sx.font='700 30px "Zen Maru Gothic",sans-serif'; ["ふ","た","り","旅"].forEach((ch,k)=>sx.fillText(ch,64,236+k*40)); };
+  drawSign(); const stex=new T.CanvasTexture(sc2); stex.encoding=T.sRGBEncoding;
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ drawSign(); stex.needsUpdate=true; if(!running) render(); });
+  const sign=new T.Mesh(new T.PlaneGeometry(.62,2.04),new T.MeshBasicMaterial({map:stex})); sign.position.set(-1.95,2.8,-3.0); set.add(sign);
+  const sglow=new T.Mesh(new T.PlaneGeometry(.9,2.3),new T.MeshBasicMaterial({color:0xfff0c8,transparent:true,opacity:.22,depthWrite:false})); sglow.position.set(-1.95,2.8,-3.05); set.add(sglow);
+  const beam=(w,h,d,x,y,z,m)=>{ const b=new T.Mesh(new T.BoxGeometry(w,h,d),m||wood); b.position.set(x,y,z); b.castShadow=true; set.add(b); return b; };
+  beam(13,.4,.5,0,4.35,-2.9); beam(13,.22,.3,0,4.0,-3.05,wood2);
+  [-4,-2.4,-.8,.8,2.4,4].forEach(x=>beam(.3,.3,4,x,4.6,-1.2));
+  const lanterns=[], lanMat=new T.MeshStandardMaterial({color:0xd8402c,emissive:0xb83020,emissiveIntensity:.55,roughness:.7}), bandMat=new T.MeshStandardMaterial({color:0x2a1c18,roughness:.6});
+  [-1.0,.35,1.65,2.95].forEach((x,k)=>{ const g=new T.Group(); g.position.set(x,4.2,-2.5);
+    const str=new T.Mesh(new T.CylinderGeometry(.008,.008,.35,4),bandMat); str.position.y=-.17; g.add(str);
+    const body=new T.Mesh(new T.SphereGeometry(1,18,14),lanMat); body.scale.set(.2,.26,.2); body.position.y=-.6; body.castShadow=true; g.add(body);
+    [-.33,-.87].forEach(y=>{ const c=new T.Mesh(new T.CylinderGeometry(.12,.12,.05,16),bandMat); c.position.y=y; g.add(c); });
+    set.add(g); lanterns.push(g); });
+
+  /* floor: tatami mats — woven igusa straw with dark cloth borders along the long edges */
+  const tc3=document.createElement("canvas"); tc3.width=512; tc3.height=256; const t3=tc3.getContext("2d");
+  t3.fillStyle="#a07a4e"; t3.fillRect(0,0,512,256);
+  for(let y=0;y<256;y+=3){ t3.fillStyle=`rgba(${Math.random()<.5?"90,62,36":"196,158,108"},${.18+Math.random()*.18})`; t3.fillRect(0,y,512,1.4); }
+  for(let k=0;k<2400;k++){ t3.fillStyle=`rgba(70,45,25,${Math.random()*.14})`; t3.fillRect(Math.random()*512,Math.floor(Math.random()*85)*3,6+Math.random()*30,1); }
+  t3.fillStyle="#3a2a20"; t3.fillRect(0,0,512,16); t3.fillRect(0,240,512,16);
+  t3.fillStyle="rgba(255,255,255,.12)"; t3.fillRect(0,3,512,2); t3.fillRect(0,243,512,2);
+  t3.fillStyle="rgba(60,50,25,.45)"; t3.fillRect(0,0,2,256); t3.fillRect(510,0,2,256);
+  const tatami=new T.CanvasTexture(tc3); tatami.wrapS=tatami.wrapT=T.RepeatWrapping; tatami.repeat.set(10/1.8,5.2/.9); tatami.encoding=T.sRGBEncoding; tatami.anisotropy=4;
+  const floor=new T.Mesh(new T.BoxGeometry(10,.24,5.2),new T.MeshStandardMaterial({map:tatami,roughness:.95})); floor.position.set(0,-.12,-.4); floor.receiveShadow=true; scene.add(floor);
+
+  /* ---- shell-textured fur: stacked shells of the body, thinned by a strand map ---- */
+  const LIGHT={key:new T.Vector3(.5,.7,.55).normalize(), keyCol:new T.Color(1.0,.9,.8), sky:new T.Color(.92,.82,.9), ground:new T.Color(.5,.36,.32), rim:new T.Color(1.0,.66,.78)};
+  const furVS=`uniform float h; uniform float len; uniform float droop; attribute vec3 color; attribute float fl;
+    varying vec3 vC; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+    void main(){ vec3 p=position+normal*h*len*fl; vec4 wp=modelMatrix*vec4(p,1.0); wp.y-=h*h*len*fl*droop;
+      vN=normalize(mat3(modelMatrix)*normal); vC=color; vUv=uv; vV=cameraPosition-wp.xyz;
+      gl_Position=projectionMatrix*viewMatrix*wp; }`;
+  const furFS=`uniform sampler2D noiseMap; uniform float h; uniform vec2 rep; uniform vec3 keyDir,keyCol,skyCol,groundCol,rimCol;
+    varying vec3 vC; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+    void main(){ float n=texture2D(noiseMap,vUv*rep).r; if(h>0.001 && n<h) discard;
+      vec3 N=normalize(vN); vec3 V=normalize(vV); float d=max(dot(N,keyDir),0.0); vec3 amb=mix(groundCol,skyCol,N.y*0.5+0.5);
+      float ao=mix(0.8,1.05,h); float rim=pow(1.0-max(dot(N,V),0.0),3.0);
+      vec3 c=vC*(keyCol*(d*0.5+0.38)+amb*0.42)*ao+rimCol*rim*0.28*(0.3+h);
+      gl_FragColor=vec4(c,1.0); }`;
+  function strandMap(kind){
+    const S=kind==="curl"?256:128, c=document.createElement("canvas"); c.width=c.height=S; const x=c.getContext("2d"), r=rng(kind==="curl"?17:29);
+    x.fillStyle="#000"; x.fillRect(0,0,S,S);
+    if(kind==="curl"){ for(let i=0;i<1400;i++){ const cx=r()*S, cy=r()*S, rad=2+r()*5, g=x.createRadialGradient(cx,cy,0,cx,cy,rad);
+        const v=150+Math.floor(r()*105); g.addColorStop(0,`rgb(${v},${v},${v})`); g.addColorStop(1,"rgba(0,0,0,0)"); x.fillStyle=g; x.fillRect(cx-rad,cy-rad,rad*2,rad*2); } }
+    else { const id=x.getImageData(0,0,S,S); for(let i=0;i<S*S;i++){ const v=Math.floor(Math.pow(r(),.7)*255); id.data[i*4]=id.data[i*4+1]=id.data[i*4+2]=v; id.data[i*4+3]=255; } x.putImageData(id,0,0); }
+    const t=new T.CanvasTexture(c); t.wrapS=t.wrapT=T.RepeatWrapping; if(kind!=="curl"){ t.magFilter=T.NearestFilter; t.minFilter=T.NearestFilter; } return t;
+  }
+  const CURL=strandMap("curl"), FINE=strandMap("fine");
+  function buildBody(parts){
+    const pos=[],nor=[],uv=[],col=[],fl=[],idx=[]; let base=0;
+    parts.forEach(pt=>{
+      const g=new T.SphereGeometry(1,40,28), P=g.attributes.position, N=g.attributes.normal, U=g.attributes.uv, k=(pt.r[0]+pt.r[1]+pt.r[2])/1.2;
+      for(let i=0;i<P.count;i++){
+        const x=pt.c[0]+P.getX(i)*pt.r[0], y=pt.c[1]+P.getY(i)*pt.r[1], z=pt.c[2]+P.getZ(i)*pt.r[2];
+        let ex=N.getX(i)/pt.r[0], ey=N.getY(i)/pt.r[1], ez=N.getZ(i)/pt.r[2]; const L=Math.hypot(ex,ey,ez)||1; ex/=L; ey/=L; ez/=L;
+        pos.push(x,y,z); nor.push(ex,ey,ez); uv.push(U.getX(i)*k*2, U.getY(i)*k);
+        const c=pt.col(x,y,z,ex,ey,ez); col.push(c[0],c[1],c[2]); fl.push(pt.len?pt.len(ex,ey,ez,x,y,z):1);
+      }
+      for(let i=0;i<g.index.count;i++) idx.push(g.index.getX(i)+base); base+=P.count; g.dispose();
+    });
+    const geo=new T.BufferGeometry();
+    geo.setAttribute("position",new T.Float32BufferAttribute(pos,3)); geo.setAttribute("normal",new T.Float32BufferAttribute(nor,3));
+    geo.setAttribute("uv",new T.Float32BufferAttribute(uv,2)); geo.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    geo.setAttribute("fl",new T.Float32BufferAttribute(fl,1)); geo.setIndex(idx); return geo;
+  }
+  function furMesh(geo,o){
+    const g=new T.Group();
+    for(let i=0;i<o.shells;i++){ const h=i/(o.shells-1);
+      const m=new T.ShaderMaterial({vertexShader:furVS, fragmentShader:furFS, uniforms:{h:{value:h},len:{value:o.len},droop:{value:o.droop},
+        noiseMap:{value:o.map},rep:{value:new T.Vector2(o.rep,o.rep)},keyDir:{value:LIGHT.key},keyCol:{value:LIGHT.keyCol},skyCol:{value:LIGHT.sky},groundCol:{value:LIGHT.ground},rimCol:{value:LIGHT.rim}}});
+      const mesh=new T.Mesh(geo,m); mesh.castShadow=i===0; mesh.renderOrder=i; g.add(mesh); }
+    return g;
+  }
+  const glossy=(c)=>new T.MeshStandardMaterial({color:c,roughness:.1,metalness:.05});
+  const ballGeo=new T.SphereGeometry(1,24,16);
+  const sph=(r,matl,pos,sc)=>{ const m=new T.Mesh(ballGeo,matl); m.scale.set(r*(sc?sc[0]:1),r*(sc?sc[1]:1),r*(sc?sc[2]:1)); m.position.set(...pos); m.castShadow=true; return m; };
+  const shine=new T.MeshBasicMaterial({color:0xffffff});
+  const eye=(pos,r)=>{ const g=new T.Group(); g.add(sph(r,glossy(0x120d0b),[0,0,0],[1,1.05,.75]));
+    g.add(sph(r*.32,shine,[r*.3,r*.36,r*.6])); g.add(sph(r*.14,shine,[-r*.28,-r*.3,r*.66])); g.position.set(...pos); return g; };
+  const sstep=(a,b,v)=>{ const t=Math.max(0,Math.min(1,(v-a)/(b-a))); return t*t*(3-2*t); };
+  const mix3=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];
+
+  /* ---- toy poodle: cream, teddy-bear cut, round fluffy head ---- */
+  const PCREAM=[1.12,1.1,1.07], PWARM=[1.06,1.03,.99];
+  const pc=(x,y,z,nx,ny,nz)=>mix3(PCREAM,PWARM,sstep(.2,-.8,ny)*.6);
+  const POO={len:.13,droop:.35,shells:18,map:CURL,rep:3.2};
+  const dog=new T.Group(); dog.position.set(-.55,0,.25); dog.rotation.y=.32; scene.add(dog);
+  dog.add(furMesh(buildBody([
+    {c:[0,.62,0],r:[.4,.47,.38],col:pc},
+    {c:[0,.8,.17],r:[.3,.32,.25],col:pc},
+    {c:[.27,.3,-.05],r:[.22,.24,.28],col:pc},{c:[-.27,.3,-.05],r:[.22,.24,.28],col:pc},
+    {c:[.15,.28,.27],r:[.1,.28,.1],col:pc},{c:[-.15,.28,.27],r:[.1,.28,.1],col:pc},
+    {c:[.15,.06,.33],r:[.12,.07,.14],col:pc,len:()=>.7},{c:[-.15,.06,.33],r:[.12,.07,.14],col:pc,len:()=>.7}
+  ]),POO));
+  const tail=new T.Group(); tail.position.set(0,.45,-.36); dog.add(tail);
+  tail.add(furMesh(buildBody([{c:[0,.06,-.08],r:[.13,.13,.13],col:pc}]),POO));
+  const head=new T.Group(); head.position.set(0,1.1,.06); dog.add(head);
+  head.add(furMesh(buildBody([
+    {c:[0,.36,.02],r:[.44,.42,.42],col:pc,len:(nx,ny,nz)=> nz>.5&&ny<.55&&ny>-.6 ? .32 : 1},
+    {c:[0,.74,-.02],r:[.34,.24,.32],col:pc,len:()=>1.15},
+    {c:[.25,.2,.27],r:[.17,.15,.14],col:pc,len:(nx,ny,nz)=>nz>.6?.5:.9},{c:[-.25,.2,.27],r:[.17,.15,.14],col:pc,len:(nx,ny,nz)=>nz>.6?.5:.9},
+    {c:[0,.18,.38],r:[.17,.13,.15],col:(x,y,z,nx,ny,nz)=>mix3(PCREAM,[1.14,1.13,1.11],.5),len:()=>.42}
+  ]),POO));
+  const earL=new T.Group(), earR=new T.Group(); earL.position.set(-.42,.42,.02); earR.position.set(.42,.42,.02); head.add(earL,earR);
+  const EAR={len:.14,droop:.8,shells:18,map:CURL,rep:3.2};
+  earL.add(furMesh(buildBody([{c:[-.04,-.24,0],r:[.15,.32,.16],col:()=>PWARM}]),EAR));
+  earR.add(furMesh(buildBody([{c:[.04,-.24,0],r:[.15,.32,.16],col:()=>PWARM}]),EAR));
+  const eyeL=eye([-.165,.41,.425],.085), eyeR=eye([.165,.41,.425],.085); head.add(eyeL,eyeR);
+  head.add(sph(.06,glossy(0x1a1210),[0,.25,.585],[1.3,.95,.9]));
+  /* mouth for barking: dark opening, lower jaw and tongue that drop when it opens */
+  const mouth=sph(.06,new T.MeshBasicMaterial({color:0x5a1c24}),[0,.13,.6],[1,.02,.25]); head.add(mouth);
+  const jaw=sph(.07,new T.MeshStandardMaterial({color:0xfbf8f2,roughness:.9}),[0,.1,.585],[1.1,.5,.8]); head.add(jaw);
+  const tongue=sph(.05,new T.MeshStandardMaterial({color:0xe7788b,roughness:.5}),[0,.11,.6],[.9,.45,1]); head.add(tongue);
+
+  /* ---- Syrian hamster: golden back, white chin and belly ---- */
+  const HG=[.86,.56,.26], HD=[.7,.42,.18], HW=[.98,.95,.9];
+  const hcBody=(x,y,z,nx,ny,nz)=>mix3(mix3(HG,HD,Math.max(0,ny)*.6), HW, sstep(.26,.12,y));
+  const hcHead=(x,y,z,nx,ny,nz)=>mix3(mix3(HG,HD,Math.max(0,ny)*.5), HW, Math.min(1, sstep(.12,-.3,ny)*sstep(.05,.45,nz)*1.3 + sstep(.85,.97,nz)*.6));
+  const HAM={len:.05,droop:.25,shells:14,map:FINE,rep:9};
+  const ham=new T.Group(); scene.add(ham);
+  const hamBody=new T.Group(); ham.add(hamBody);
+  hamBody.add(furMesh(buildBody([
+    {c:[0,.3,-.05],r:[.38,.32,.42],col:hcBody},
+    {c:[0,.27,-.3],r:[.33,.28,.25],col:hcBody},
+    {c:[0,.42,.3],r:[.31,.29,.28],col:hcHead,len:(nx,ny,nz)=>nz>.7?.6:1},
+  ]),HAM));
+  const earMat=new T.MeshStandardMaterial({color:0x8a5a48,roughness:.7}), earIn=new T.MeshStandardMaterial({color:0xeea4ac,roughness:.7});
+  [[-.2,.68,.25],[.2,.68,.25]].forEach(p=>{ hamBody.add(sph(.1,earMat,p,[1,1,.4])); hamBody.add(sph(.065,earIn,[p[0],p[1]-.01,p[2]+.03],[1,1,.3])); });
+  const hEyeL=eye([-.13,.48,.555],.058), hEyeR=eye([.13,.48,.555],.058); hamBody.add(hEyeL,hEyeR);
+  const hNose=sph(.028,new T.MeshStandardMaterial({color:0xe58a9a,roughness:.4}),[0,.38,.615]); hamBody.add(hNose);
+  const pawMat=new T.MeshStandardMaterial({color:0xf0a8b0,roughness:.6});
+  hamBody.add(sph(.05,pawMat,[-.12,.03,.25],[1,.6,1.2])); hamBody.add(sph(.05,pawMat,[.12,.03,.25],[1,.6,1.2]));
+  /* chubby cheeks as their own pieces so they can puff while chewing */
+  const cheekL=new T.Group(), cheekR=new T.Group(); cheekL.position.set(-.19,.32,.42); cheekR.position.set(.19,.32,.42); hamBody.add(cheekL,cheekR);
+  [cheekL,cheekR].forEach(g=>g.add(furMesh(buildBody([{c:[0,0,0],r:[.14,.13,.12],col:()=>mix3(HG,HW,.8)}]),HAM)));
+  /* a sunflower seed held in both front paws */
+  const seed=new T.Group(); seed.position.set(0,.27,.66); seed.rotation.z=.3; hamBody.add(seed);
+  seed.add(sph(1,new T.MeshStandardMaterial({color:0x2e2a2a,roughness:.5}),[0,0,0],[.03,.058,.024]));
+  [-.012,.012].forEach(x=>seed.add(sph(1,new T.MeshStandardMaterial({color:0xe8e2d6,roughness:.6}),[x,0,.004],[.006,.052,.022])));
+  const pawL=sph(.042,pawMat,[-.07,.25,.63],[1,1.2,.9]), pawR=sph(.042,pawMat,[.07,.25,.63],[1,1.2,.9]); hamBody.add(pawL,pawR);
+  /* hero pose: side by side, the hamster on a little red zabuton cushion */
+  const zab=new T.Mesh(new T.BoxGeometry(.85,.1,.85),mat(0xb8382a)); zab.position.set(.75,.05,.55); zab.rotation.y=-.3; zab.castShadow=zab.receiveShadow=true; scene.add(zab);
+  const HERO_HAM={pos:new T.Vector3(.75,.1,.6),rot:-.3,scale:1.2};
+  function placeHam(onHead){
+    if(onHead){ head.add(ham); ham.position.set(0,.84,-.04); ham.rotation.set(0,0,0); ham.scale.setScalar(.62); }
+    else { scene.add(ham); ham.position.copy(HERO_HAM.pos); ham.rotation.set(0,HERO_HAM.rot,0); ham.scale.setScalar(HERO_HAM.scale); }
+  }
+  placeHam(false);
+
+  /* ---- stone lantern ---- */
+  /* granite texture: grey speckle, darker weathering, a little moss */
+  const gc=document.createElement("canvas"); gc.width=gc.height=256; const gx=gc.getContext("2d");
+  gx.fillStyle="#8d8984"; gx.fillRect(0,0,256,256);
+  for(let k=0;k<60;k++){ const x=Math.random()*256,y=Math.random()*256,r=10+Math.random()*30,g=gx.createRadialGradient(x,y,0,x,y,r); g.addColorStop(0,`rgba(${Math.random()<.5?"60,58,56":"170,165,158"},.35)`); g.addColorStop(1,"rgba(0,0,0,0)"); gx.fillStyle=g; gx.fillRect(x-r,y-r,r*2,r*2); }
+  for(let k=0;k<9000;k++){ const v=Math.random(); gx.fillStyle=v<.33?"rgba(40,38,36,.55)":v<.66?"rgba(220,216,208,.5)":"rgba(120,110,100,.45)"; gx.fillRect(Math.random()*256,Math.random()*256,1+Math.random()*1.5,1+Math.random()*1.5); }
+  for(let k=0;k<14;k++){ const x=Math.random()*256,y=Math.random()*256,r=4+Math.random()*10,g=gx.createRadialGradient(x,y,0,x,y,r); g.addColorStop(0,"rgba(90,110,60,.45)"); g.addColorStop(1,"rgba(0,0,0,0)"); gx.fillStyle=g; gx.fillRect(x-r,y-r,r*2,r*2); }
+  const gtex=new T.CanvasTexture(gc); gtex.wrapS=gtex.wrapT=T.RepeatWrapping; gtex.encoding=T.sRGBEncoding;
+  const gbump=new T.CanvasTexture(gc); gbump.wrapS=gbump.wrapT=T.RepeatWrapping;
+  const stone=new T.MeshStandardMaterial({map:gtex,bumpMap:gbump,bumpScale:.04,roughness:.97,color:0xa8a39c}), lan=new T.Group(); lan.position.set(-1.95,0,-.5); scene.add(lan);
+  const box=(w,h,d,y,m)=>{ const b=new T.Mesh(new T.BoxGeometry(w,h,d),m||stone); b.position.y=y; b.castShadow=true; b.receiveShadow=true; lan.add(b); return b; };
+  box(.6,.14,.6,.07); const pil=new T.Mesh(new T.CylinderGeometry(.11,.13,.85,10),stone); pil.position.y=.56; pil.castShadow=true; lan.add(pil);
+  box(.62,.12,.62,1.04); box(.42,.38,.42,1.29);
+  const glow=new T.Mesh(new T.PlaneGeometry(.24,.24),new T.MeshBasicMaterial({color:0xffc560})); glow.position.set(0,1.29,.215); lan.add(glow);
+  const roof=new T.Mesh(new T.ConeGeometry(.52,.34,4),stone); roof.rotation.y=Math.PI/4; roof.position.y=1.65; roof.castShadow=true; lan.add(roof);
+  const knob=sph(.08,stone,[0,1.86,0]); lan.add(knob);
+  const pl=new T.PointLight(0xffb050,1.3,5,2); pl.position.set(0,1.29,.4); lan.add(pl);
+
+  /* ---- maple tree with instanced maple leaves ---- */
+  const shape=new T.Shape(); LEAF.pts.forEach(([x,y],i)=> i?shape.lineTo(x,-y):shape.moveTo(x,-y));
+  const leafGeo=new T.ShapeGeometry(shape); leafGeo.scale(.16,.16,.16);
+  const bark=mat(0x4a2f22), tree=new T.Group(); tree.position.set(2.15,0,-.9); scene.add(tree);
+  const limb=(r0,r1,len,pos,rot)=>{ const c=new T.Mesh(new T.CylinderGeometry(r1,r0,len,8),bark); c.position.set(...pos); c.rotation.set(...rot); c.castShadow=true; tree.add(c); };
+  limb(.2,.13,2.4,[0,1.2,0],[0,0,.08]); limb(.1,.05,1.3,[-.45,2.35,0],[0,0,.75]); limb(.09,.05,1.1,[.35,2.5,.1],[0,0,-.6]); limb(.07,.04,.9,[-.1,2.7,-.2],[.3,0,.15]);
+  const clusters=[[-1.0,2.95,.15,.75],[-.25,3.3,0,.8],[.6,3.0,.2,.7],[-.6,2.45,.45,.55],[.25,2.6,.55,.5],[-1.4,2.5,.1,.5]];
+  const NL=520, leaves3=new T.InstancedMesh(leafGeo,new T.MeshStandardMaterial({roughness:.75,side:T.DoubleSide}),NL); leaves3.castShadow=true;
+  const m4=new T.Matrix4(), e=new T.Euler(), q4=new T.Quaternion(), p4=new T.Vector3(), s4=new T.Vector3();
+  for(let i=0;i<NL;i++){ const cl=clusters[i%clusters.length]; const u=R()*2-1, th=R()*6.28, rad=cl[3]*Math.cbrt(R()), rr=Math.sqrt(1-u*u);
+    p4.set(cl[0]+Math.cos(th)*rr*rad, cl[1]+u*rad*.7, cl[2]+Math.sin(th)*rr*rad); e.set(R()*6.28,R()*6.28,R()*6.28); q4.setFromEuler(e);
+    const sc=.8+R()*.5; s4.set(sc,sc,sc); m4.compose(p4,q4,s4); leaves3.setMatrixAt(i,m4); }
+  tree.add(leaves3);
+  const NF=46, floorLeaves=new T.InstancedMesh(leafGeo,new T.MeshStandardMaterial({roughness:.9,side:T.DoubleSide}),NF); floorLeaves.receiveShadow=true;
+  for(let i=0;i<NF;i++){ p4.set(-3.5+R()*7.5,.01+i*.0004,-1.8+R()*3.2); e.set(-Math.PI/2,0,R()*6.28); q4.setFromEuler(e); const sc=.8+R()*.4; s4.set(sc,sc,sc); m4.compose(p4,q4,s4); floorLeaves.setMatrixAt(i,m4); }
+  scene.add(floorLeaves);
+  let t=0, last=0, running=false, onScreen=true;
+  recolorTree=()=>{ const pal=palette(activeDay), c=new T.Color(), r2=rng(3);
+    for(let i=0;i<NL;i++){ c.set(pal[Math.floor(r2()*pal.length)]); leaves3.setColorAt(i,c); } leaves3.instanceColor.needsUpdate=true;
+    for(let i=0;i<NF;i++){ c.set(pal[Math.floor(r2()*pal.length)]).multiplyScalar(.85); floorLeaves.setColorAt(i,c); } floorLeaves.instanceColor.needsUpdate=true;
+    if(reduce||!running) render(); };
+  /* ---- drag to look ---- */
+  let yaw=0, tYaw=0, pitch=0, tPitch=0, drag=null;
+  ren.domElement.addEventListener("pointerdown",e=>{ drag={x:e.clientX,y:e.clientY,y0:tYaw,p0:tPitch}; });
+  addEventListener("pointermove",e=>{ if(!drag) return; tYaw=Math.max(-.55,Math.min(.55,drag.y0+(e.clientX-drag.x)*.004)); tPitch=Math.max(-.12,Math.min(.25,drag.p0+(e.clientY-drag.y)*.002)); });
+  addEventListener("pointerup",()=>drag=null); addEventListener("pointercancel",()=>drag=null);
+
+  /* ---- animation ---- */
+  function pose(tt){
+    lanterns.forEach((g,k)=>g.rotation.z=Math.sin(tt*1.4+k*1.3)*.05);
+    head.rotation.z=Math.sin(tt*1.1)*.1; head.rotation.y=.12+Math.sin(tt*.5)*.22; head.rotation.x=Math.sin(tt*.8)*.04;
+    earL.rotation.z=Math.sin(tt*2.1)*.1-.03; earR.rotation.z=-Math.sin(tt*2.1+.6)*.1+.03;
+    tail.rotation.y=Math.sin(tt*9)*.45;
+    /* bark: two quick "woofs" every few seconds */
+    const tb=tt%4.6, burst=(s0,d)=> tb>=s0&&tb<s0+d ? Math.sin(Math.PI*(tb-s0)/d) : 0, open=burst(.0,.22)+burst(.32,.22);
+    barking=tb<.62;
+    head.rotation.x-=.2*open; head.position.y=1.1+open*.03; dog.position.y=open*.03;
+    earL.rotation.z-=.28*open; earR.rotation.z+=.28*open; tail.rotation.y*= 1+open;
+    mouth.scale.y=.06*(.03+open*1.5); mouth.scale.x=.06*(1+open*.3); jaw.position.y=.1-open*.075; tongue.position.y=.11-open*.065; tongue.scale.z=.05*(1+open*.4);
+    eyeL.scale.y=eyeR.scale.y=(tt%3.7)<.12?.12:1; hEyeL.scale.y=hEyeR.scale.y=((tt+1.6)%4.3)<.12?.15:1;
+    /* hamster: nibbles a seed, startles a little when the poodle barks */
+    const startle=burst(.05,.45), chewing=1-Math.min(1,startle*3), chew=Math.sin(tt*14)*chewing;
+    hamBody.position.y=startle*.1; hamBody.rotation.y=Math.sin(tt*.6)*.25; hamBody.scale.set(1+Math.sin(tt*5)*.012,1+Math.sin(tt*5)*.02,1);
+    cheekL.scale.setScalar(1+Math.abs(chew)*.1); cheekR.scale.setScalar(1+Math.abs(Math.sin(tt*14+.4))*chewing*.1);
+    const left=1-((tt%5.5)/5.5)*.75; seed.scale.setScalar(left); seed.position.y=.27+chew*.007; seed.rotation.z=.3+Math.sin(tt*7)*.15*chewing;
+    pawL.position.y=pawR.position.y=.25+chew*.007;
+    hNose.position.y=.38+Math.sin(tt*20)*.007;
+  }
+  let barking=false; const woof=$("#woof"), wv=new T.Vector3();
+  function render(){
+    yaw+=(tYaw-yaw)*.35; pitch+=(tPitch-pitch)*.35;
+    const drift=reduce?0:Math.sin(t*.25)*.12;
+    const r=camBase.z; cam.position.set(Math.sin(yaw+drift)*r+camBase.x, camBase.y+pitch*4, Math.cos(yaw+drift)*r); cam.lookAt(look);
+    ren.render(scene,cam);
+  }
+  function loop(now){
+    if(!running) return; requestAnimationFrame(loop);
+    if(now-last<1000/24) return; last=now; t+=1/24; pose(t); render();
+    if(woof){ if(barking){ wv.set(.1,.75,.4); head.localToWorld(wv); wv.project(cam); woof.style.left=((wv.x*.5+.5)*host.clientWidth)+"px"; woof.style.top=((-wv.y*.5+.5)*host.clientHeight)+"px"; }
+      woof.classList.toggle("on",barking); }
+  }
+  /* sprite frames of the pair for the timeline walker */
+  function snap(){
+    const hidden=[set,floor,lan,tree,floorLeaves,zab]; hidden.forEach(o=>o.visible=false);
+    const sz=new T.Vector2(); ren.getSize(sz); const aspect=cam.aspect;
+    ren.setSize(180,180,false); cam.aspect=1; cam.updateProjectionMatrix();
+    const saveRot=dog.rotation.y, savePos=dog.position.clone(); dog.rotation.y=.35; dog.position.set(0,0,.3); placeHam(true);
+    cam.position.set(.7,1.9,5.3); cam.lookAt(0,1.42,.3);
+    const frames=[]; [1.0,2.2].forEach(tt=>{ pose(tt); ren.render(scene,cam); frames.push(ren.domElement.toDataURL("image/png")); });
+    dog.rotation.y=saveRot; dog.position.copy(savePos); placeHam(false); hidden.forEach(o=>o.visible=true);
+    ren.setSize(sz.x,sz.y); cam.aspect=aspect; cam.updateProjectionMatrix();
+    return frames;
+  }
+  recolorTree();
+  DUO_FRAMES=snap();
+  const fd=$("#footDuo"); fd.src=DUO_FRAMES[1]; fd.hidden=false;
+  if(dayView) dayView.duo.src=DUO_FRAMES[0];
+  cam.aspect=W/H; cam.updateProjectionMatrix(); pose(0); render();
+  if(!reduce){
+    const io=new IntersectionObserver(es=>{ onScreen=es[0].isIntersecting; if(onScreen&&!running){ running=true; requestAnimationFrame(loop); } else if(!onScreen) running=false; });
+    io.observe(host);
+  }
+  addEventListener("resize",()=>{ const w=host.clientWidth,h=host.clientHeight; ren.setSize(w,h); cam.aspect=w/h; cam.updateProjectionMatrix(); render(); });
+  listeners.push(()=>recolorTree());
+}
+
+/* ============================================================
+   MAP (hand-drawn SVG, approximate)
+   ============================================================ */
+function initMap(){
+  const L0=135.755, L1=135.797, A1=35.024, A0=34.978, VW=340, VH=Math.round(VW*((A1-A0)*111)/((L1-L0)*91.2));
+  const X=l=>((l-L0)/(L1-L0)*VW).toFixed(1), Y=a=>((A1-a)/(A1-A0)*VH).toFixed(1);
+  const line=(pts)=>pts.map((p,i)=>(i?"L":"M")+X(p[1])+" "+Y(p[0])).join("");
+  const river=line([[35.024,135.7727],[35.016,135.7722],[35.0085,135.7716],[35.0035,135.7713],[34.996,135.7697],[34.988,135.7690],[34.978,135.7700]]);
+  const hills=`M${X(135.7875)} 0 C ${X(135.785)} ${Y(35.012)}, ${X(135.7835)} ${Y(35.0)}, ${X(135.7880)} ${Y(34.990)} L ${X(135.790)} ${VH} L ${VW} ${VH} L ${VW} 0 Z`;
+  const days=["#e0563a","#eea131","#47aaa7"];
+  let svg=`<svg viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Map of the places we visit in eastern Kyoto">
+   <defs><pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#efe3cf"/><circle cx="1" cy="1" r=".6" fill="#e2d3bb"/></pattern></defs>
+   <rect width="${VW}" height="${VH}" fill="url(#grain)"/>
+   <path d="${hills}" fill="#c9cfa5" opacity=".7"/>
+   <path id="hillTint" d="${hills}" fill="#6b8f3a" opacity=".18"/>
+   <text x="${VW-12}" y="${Y(35.006)}" text-anchor="end" font-size="11" fill="#5d6b3c" font-family="Zen Maru Gothic,sans-serif">東山 Higashiyama</text>
+   <path d="${line([[35.0035,L0],[35.0035,135.7785]])}" stroke="#fff" stroke-width="5"/><path d="${line([[34.9958,L0],[34.9958,135.786]])}" stroke="#fff" stroke-width="5"/>
+   <path d="${line([[35.0165,L0],[35.0165,135.786]])}" stroke="#fff" stroke-width="4"/><path d="${line([[34.9855,L0],[34.9855,135.775]])}" stroke="#b8a998" stroke-width="3" stroke-dasharray="6 4"/>
+   <text x="6" y="${(+Y(35.0035)-5)}" font-size="10" fill="#7c6a58" font-family="Zen Maru Gothic,sans-serif">四条通 Shijo</text>
+   <text x="6" y="${(+Y(34.9958)-5)}" font-size="10" fill="#7c6a58" font-family="Zen Maru Gothic,sans-serif">五条通 Gojo</text>
+   <text x="6" y="${(+Y(35.0165)-5)}" font-size="10" fill="#7c6a58" font-family="Zen Maru Gothic,sans-serif">丸太町通 Marutamachi</text>
+   <path d="${river}" stroke="#7db4d6" stroke-width="9" fill="none" stroke-linecap="round"/>
+   <text transform="translate(${+X(135.7716)-8} ${Y(35.012)}) rotate(-88)" font-size="10" fill="#3f7aa0" font-family="Zen Maru Gothic,sans-serif">鴨川 Kamo River</text>
+   <rect x="${+X(135.7588)-16}" y="${+Y(34.9858)-7}" width="32" height="14" rx="3" fill="#6e6070"/><text x="${X(135.7588)}" y="${+Y(34.9858)+4}" text-anchor="middle" font-size="9" fill="#fff" font-family="Zen Maru Gothic,sans-serif">京都駅</text>
+   <text x="4" y="${+Y(34.9858)+22}" text-anchor="start" font-size="9.5" fill="#6e6070" font-family="Zen Maru Gothic,sans-serif">← 新大阪 Shin-Osaka</text>`;
+  const counters=[0,0,0];
+  PLACES.forEach((p,i)=>{ const n=++counters[p.day];
+    svg+=`<g class="mk" data-i="${i}" data-day="${p.day}" tabindex="0" role="button" aria-label="${p.en}"><circle cx="${X(p.lng)}" cy="${Y(p.lat)}" r="14" fill="transparent"/><circle class="dot" cx="${X(p.lng)}" cy="${Y(p.lat)}" r="9" fill="${days[p.day]}"/><text x="${X(p.lng)}" y="${+Y(p.lat)+3.5}" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Zen Maru Gothic,sans-serif" pointer-events="none">${n}</text></g>`; });
+  svg+="</svg>";
+  $("#map").innerHTML=svg;
+  const card=$("#mapcard");
+  const sel=i=>{ const p=PLACES[i]; document.querySelectorAll(".mk").forEach(g=>g.classList.toggle("sel",+g.dataset.i===i));
+    card.innerHTML=`<div class="k" style="color:${days[p.day]}">${p.day+1}日目 · Day ${p.day+1}</div><div class="ja">${p.ja}</div><div class="en">${p.en}</div>`;
+    card.appendChild(linksEl([{l:"地図で開く Open in Maps",u:M(p.q)}])); };
+  document.querySelectorAll(".mk").forEach(g=>{ const go=()=>sel(+g.dataset.i); g.addEventListener("click",go); g.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }); });
+  card.innerHTML=`<div class="en">${PLACES.length}か所 · ${PLACES.length} places. 点をタップしてね · Tap a dot.</div>`;
+  const filt=$("#mapfilter"); const opts=[{k:-1,l:"ぜんぶ All"},...DAYS.map((d,i)=>({k:i,l:`${i+1}日目 Day ${i+1}`,c:days[i]}))];
+  const fbs=opts.map(o=>{ const b=el("button",null,o.l); if(o.c) b.style.setProperty("--dc",o.c); b.setAttribute("aria-pressed",String(o.k===-1));
+    b.addEventListener("click",()=>{ fbs.forEach(x=>x.setAttribute("aria-pressed","false")); b.setAttribute("aria-pressed","true");
+      document.querySelectorAll(".mk").forEach(g=>g.classList.toggle("dim", o.k!==-1 && +g.dataset.day!==o.k)); }); filt.appendChild(b); return b; });
+  listeners.push(()=>{ const h=document.getElementById("hillTint"); if(h) h.setAttribute("fill",palette(activeDay)[0]); });
+}
+
+/* ============================================================
+   LIVE DATA — only works on a real host. Inside the artifact viewer both
+   requests are blocked, and the page keeps the data written above.
+   ============================================================ */
+const WMO = c => c<=1?{icon:"sun",ja:"晴れ",en:"Sunny"} : c===2?{icon:"partly",ja:"晴れ時々曇り",en:"Partly cloudy"}
+  : c===3||c===45||c===48?{icon:"cloud",ja:"曇り",en:"Cloudy"} : (c>=71&&c<=77)||c===85||c===86?{icon:"cloud",ja:"雪",en:"Snow"}
+  : c>=95?{icon:"rain",ja:"雷雨",en:"Thunderstorms"} : {icon:"rain",ja:"雨",en:"Rain"};
+function refreshView(){ renderMeter(); if(dayView) showDay(activeDay,false); }
+async function loadLiveWeather(){
+  const url="https://api.open-meteo.com/v1/forecast?latitude=34.996&longitude=135.780&timezone=Asia%2FTokyo"
+    +"&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"
+    +`&start_date=${DAYS[0].date}&end_date=${DAYS[DAYS.length-1].date}`;
+  const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error("weather "+r.status);
+  const j=await r.json(), d=j.daily; if(!d||!d.time) throw new Error("weather: no daily data");
+  let changed=false;
+  d.time.forEach((date,i)=>{ if(!WEATHER.days[date] || d.temperature_2m_max[i]==null) return;
+    WEATHER.days[date]=Object.assign({type:"forecast",live:true,hi:Math.round(d.temperature_2m_max[i]),lo:Math.round(d.temperature_2m_min[i]),
+      rain:d.precipitation_probability_max[i]}, WMO(d.weather_code[i])); changed=true; });
+  return changed;
+}
+async function loadFoliage(){
+  const r=await fetch("foliage.json",{cache:"no-store"}); if(!r.ok) throw new Error("foliage "+r.status);
+  const j=await r.json(); if(!j||!j.asOf||!j.spots) throw new Error("foliage: bad file");
+  if(j.asOf<FOLIAGE.asOf) return false;
+  let changed=j.asOf!==FOLIAGE.asOf;
+  Object.keys(FOLIAGE.spots).forEach(k=>{ const v=j.spots[k]; if(Number.isInteger(v)&&v>=0&&v<STATUS.length&&v!==FOLIAGE.spots[k].s){ FOLIAGE.spots[k].s=v; changed=true; } });
+  FOLIAGE.asOf=j.asOf; return changed;
+}
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+const fromHash = DAYS.findIndex(d=>"#"+d.id===location.hash);
+const byDate = today<="2026-11-13"?0 : today==="2026-11-14"?1 : 2;
+try{ initHero(); }catch(err){ console.error(err); }
+initMap();
+showDay(fromHash>=0?fromHash:byDate,false);
+Promise.allSettled([loadFoliage(),loadLiveWeather()]).then(rs=>{
+  rs.forEach(r=>{ if(r.status==="rejected") console.info("[live data] using built-in data:", r.reason&&r.reason.message); });
+  if(rs.some(r=>r.status==="fulfilled"&&r.value)){ refreshView(); leafChanged(); }
+});
+addEventListener("hashchange",()=>{ const i=DAYS.findIndex(d=>"#"+d.id===location.hash); if(i>=0&&i!==activeDay) showDay(i,false); });
+})();
+</script>
+</body>
+</html>
