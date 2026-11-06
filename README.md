@@ -9,7 +9,8 @@ Our Kyoto itinerary site, 13–15 Nov 2026.
 - `scripts/update_foliage.py`: reads Keihan's report
 
 The weather loads live from Open-Meteo each time the page opens. The momiji
-check runs on Tuesdays and Fridays (Keihan's update days) and once a day
-otherwise. If Keihan's page ever changes, the check keeps the last good data.
+check runs once on Tuesdays and Fridays at 10:17 Japan time (Keihan's update
+days), and the site only redeploys when the status has changed. If Keihan's
+page ever changes, the check keeps the last good data.
 
 To run the check by hand: Actions → "Momiji check and deploy" → Run workflow.

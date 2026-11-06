@@ -5,11 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Keihan updates on Tuesdays and Fridays (Japan time). Check three times
-    # on those days, plus once on the other days in case they publish late.
-    # 01:17, 05:17, 09:17 UTC = 10:17, 14:17, 18:17 in Japan.
-    - cron: "17 1,5,9 * * 2,5"
-    - cron: "17 3 * * 0,1,3,4,6"
+    # Keihan updates on Tuesdays and Fridays. Check once on each:
+    # 01:17 UTC = 10:17 in Japan.
+    - cron: "17 1 * * 2,5"
 
 permissions:
   contents: write
@@ -34,9 +32,11 @@ jobs:
         run: python3 scripts/update_foliage.py
 
       - name: Save foliage.json if it changed
+        id: save
         if: github.event_name != 'push'
         run: |
           if ! git diff --quiet -- foliage.json; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             git config user.name "momiji-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add foliage.json
@@ -44,14 +44,19 @@ jobs:
             git push
           fi
 
+      # A scheduled check with no change skips the redeploy.
       - name: Prepare site files
+        if: github.event_name != 'schedule' || steps.save.outputs.changed == 'true'
         run: |
           mkdir -p _site
           cp index.html three.min.js foliage.json _site/
 
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'schedule' || steps.save.outputs.changed == 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'schedule' || steps.save.outputs.changed == 'true'
         with:
           path: _site
       - id: deploy
+        if: github.event_name != 'schedule' || steps.save.outputs.changed == 'true'
         uses: actions/deploy-pages@v4
