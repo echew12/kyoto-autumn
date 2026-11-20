@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-17",
+  "asOf": "2026-11-20",
   "spots": {
-    "kodaiji": 1,
-    "shinnyodo": 1,
-    "nanzenji": 1
+    "kodaiji": 2,
+    "shinnyodo": 2,
+    "nanzenji": 2
   },
   "source": "https://www.keihan.co.jp/momiji/index_en.html",
-  "checked": "2026-11-17T09:14Z"
+  "checked": "2026-11-20T08:34Z"
 }
