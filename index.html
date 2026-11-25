@@ -208,6 +208,7 @@ footer img{width:96px;height:96px;display:block;margin:0 auto 6px}
   #leaves{display:none}
 }
 </style>
+<script data-goatcounter="https://echew12.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <canvas id="leaves" aria-hidden="true"></canvas>
@@ -783,10 +784,11 @@ function menuEl(mn){
   return det;
 }
 let dayView=null;
+function track(id){ try{ const gc=window.goatcounter; if(gc&&gc.count) gc.count({path:location.pathname.replace(/\/$/,"")+"/"+id, title:id, event:false}); }catch(e){} }
 function showDay(i,user){
   activeDay=i;
   tabBtns.forEach((b,k)=>b.setAttribute("aria-selected",k===i?"true":"false"));
-  if(user){ try{ history.replaceState(null,"","#"+DAYS[i].id); }catch(e){ location.hash=DAYS[i].id; } }
+  if(user){ try{ history.replaceState(null,"","#"+DAYS[i].id); }catch(e){ location.hash=DAYS[i].id; } track(DAYS[i].id); }
   const d=DAYS[i]; panelEl.innerHTML=""; panelEl.style.setProperty("--dc",d.color);
   const sec=el("section","panel"); sec.setAttribute("role","tabpanel"); sec.setAttribute("aria-labelledby","tab-"+d.id);
 
